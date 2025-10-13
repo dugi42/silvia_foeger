@@ -66,8 +66,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: rgba(247, 244, 241, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-line);
 }
 
@@ -80,10 +80,19 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-heading);
   font-size: 1.25rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.brand__logo {
+  display: block;
+  height: 52px;
+  width: auto;
 }
 
 .nav-links {
@@ -492,4 +501,3 @@ section {
     scroll-behavior: auto !important;
   }
 }
-
