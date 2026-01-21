@@ -454,6 +454,10 @@ a {
     padding: 0;
   }
 
+  .hero__panel img {
+    object-fit: cover;
+  }
+
   .hero__title {
     font-size: clamp(9rem, 24vw, 18rem);
     letter-spacing: 0.18em;
