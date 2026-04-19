@@ -5,153 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Silvia Föger ist eine multidisziplinäre Künstlerin, die handgefertigte Keramik, eindringliche Lyrik und stimmungsvolle Fotografie teilt."
+      content="Silvia Föger — Keramikerin, Lyrikerin und bildende Künstlerin aus Tirol, Österreich. Handgeformte Gefäße, Poesie und Zeichnungen."
     />
-    <title>Silvia Föger | Künstlerin & Töpferin</title>
+    <title>Silvia Föger | Künstlerin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="site-header">
-        <div class="container">
-          <nav class="nav">
-            <a class="brand" href="#hero">
-              <img class="brand__logo" src="assets/img/logo.png" alt="Silvia Föger Logo" />
-              <span class="sr-only">Silvia Föger</span>
-            </a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
-              <span class="sr-only">Navigation umschalten</span>
-              <span class="nav-toggle__bar"></span>
-            </button>
-            <div class="nav-links" id="nav-links">
-              <a href="#hero">Home</a>
-              <a href="#gallery">Gallery</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </nav>
+
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="#hero" aria-label="Silvia Föger — zur Startseite">
+            <img class="brand__logo" src="assets/img/logo.png" alt="Silvia Föger Spirale Logo" />
+          </a>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
+            <span class="sr-only">Navigation umschalten</span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+          <div class="nav-links" id="nav-links">
+            <a href="#works">Werke</a>
+            <a href="#disciplines">Disziplinen</a>
+            <a href="#about">Über mich</a>
+            <a href="#contact">Kontakt</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="hero" class="hero">
+        <div class="hero__body">
+          <div class="hero__spiral" aria-hidden="true">
+            <img src="assets/img/logo.png" alt="" />
+          </div>
+          <div class="hero__text">
+            <h1 class="hero__name">Silvia Föger</h1>
+            <div class="hero__rule" aria-hidden="true"></div>
+            <p class="hero__tagline">Keramik &nbsp;·&nbsp; Lyrik &nbsp;·&nbsp; Bildende Kunst</p>
+          </div>
         </div>
-      </header>
+        <a class="hero__scroll" href="#works" aria-label="Zu den Werken scrollen">
+          <span class="hero__scroll-line"></span>
+        </a>
+      </section>
 
-      <main>
-        <section id="hero" class="hero">
-          <div class="container hero__content">
-            <button class="hero__nav hero__nav--prev" type="button" aria-label="Vorheriges Werk">
-              <span></span>
-            </button>
-            <div class="hero__panel">
-              <img
-                src="assets/img/header_silvia_spiral.jpg"
-                alt="Abstrakter Hintergrund mit spiralenhaften Linien."
-              />
-              <h1 class="hero__title">Silvia Föger</h1>
+      <section id="works" class="works">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow">Aktuelle Werke</p>
+            <h2>Aus dem Atelier</h2>
+          </header>
+        </div>
+        <div class="works__grid">
+          <article class="work-card reveal" style="--reveal-delay: 0.05s">
+            <div class="work-card__img">
+              <img src="assets/img/img3.png" alt="Keramisches Portrait in Schwarz-Weiß." />
             </div>
-            <button class="hero__nav hero__nav--next" type="button" aria-label="Naechstes Werk">
-              <span></span>
-            </button>
-          </div>
-        </section>
-
-        <section id="gallery" class="latest">
-          <div class="container">
-            <header class="latest__header">
-              <p class="eyebrow">Latest Creations</p>
-            </header>
-            <div class="latest__grid">
-              <article class="latest__item latest__item--featured" style="--delay: 0.05s">
-                <div class="latest__frame">
-                  <img src="assets/img/img3.png" alt="Black and white ceramic detail." />
-                </div>
-                <h3>Monochrome Muse</h3>
-                <p>Portrait study</p>
-              </article>
-              <article class="latest__item" style="--delay: 0.12s">
-                <img src="assets/img/img4.png" alt="Ceramic vessels arranged in a row." />
-                <h3>Quiet Poise</h3>
-                <p>Stoneware forms</p>
-              </article>
-              <article class="latest__item" style="--delay: 0.2s">
-                <img src="assets/img/img5.png" alt="Ceramic vases on shelves." />
-                <h3>Atelier Rhythm</h3>
-                <p>Studio series</p>
-              </article>
-              <article class="latest__item" style="--delay: 0.28s">
-                <img
-                  src="assets/img/img8.png"
-                  alt="Sculptural ceramic object with color accents."
-                />
-                <h3>Golden Glaze</h3>
-                <p>Mixed media</p>
-              </article>
+            <div class="work-card__info">
+              <span class="work-card__cat">Keramik</span>
+              <h3>Monochrome Muse</h3>
             </div>
-          </div>
-        </section>
-
-        <section id="about" class="about">
-          <div class="container">
-            <header class="about__header">
-              <p class="eyebrow">About</p>
-              <h2>In der Heimat verwurzelt, vom Gefühl geführt</h2>
-              <p>
-                Aufgewachsen zwischen alpinen Wiesen und pulsierendem Stadtlicht, verwebt Silvia rohe
-                Texturen und warme Töne zu sinnlichen Objekten. Jedes Gefäß, jedes Gedicht und jede
-                Fotografie lädt dazu ein, innezuhalten und die Poesie des Alltags neu zu entdecken.
-              </p>
-            </header>
-            <div class="about__grid">
-              <article>
-                <h3>Gefäße aus Erde</h3>
-                <p>
-                  Auf der Drehscheibe geformtes Steinzeug mit matten Glasuren, inspiriert von
-                  Flusskieseln, regendurchtränktem Boden und dem sanften Schimmer des Morgenlichts.
-                </p>
-              </article>
-              <article>
-                <h3>Gedichte zum Lauschen</h3>
-                <p>
-                  Leise Verse, verwoben mit Feldaufnahmen, Atem und Erinnerung - herausgegeben als
-                  limitierte Letterpress-Editionen.
-                </p>
-              </article>
-              <article>
-                <h3>Intime Bildgeschichten</h3>
-                <p>
-                  Atmosphärische Fotografien, die Ritual, Wiederholung und die haptische Schönheit des
-                  Ateliers in Bewegung festhalten.
-                </p>
-              </article>
+          </article>
+          <article class="work-card reveal" style="--reveal-delay: 0.12s">
+            <div class="work-card__img">
+              <img src="assets/img/img4.png" alt="Keramikgefäße in einer Reihe." />
             </div>
-          </div>
-        </section>
-      </main>
+            <div class="work-card__info">
+              <span class="work-card__cat">Steinzeug</span>
+              <h3>Stille Form</h3>
+            </div>
+          </article>
+          <article class="work-card reveal" style="--reveal-delay: 0.18s">
+            <div class="work-card__img">
+              <img src="assets/img/img5.png" alt="Vasen auf Regalen im Atelier." />
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Studio</span>
+              <h3>Atelierrhythmus</h3>
+            </div>
+          </article>
+          <article class="work-card reveal" style="--reveal-delay: 0.24s">
+            <div class="work-card__img">
+              <img src="assets/img/img8.png" alt="Skulpturales Keramikobjekt mit Farbakzenten." />
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Glasur</span>
+              <h3>Goldene Glasur</h3>
+            </div>
+          </article>
+          <article class="work-card reveal" style="--reveal-delay: 0.15s">
+            <div class="work-card__img">
+              <img src="assets/img/img1.png" alt="Künstlerische Arbeit von Silvia Föger." />
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Zeichnung</span>
+              <h3>Linie &amp; Schatten</h3>
+            </div>
+          </article>
+          <article class="work-card reveal" style="--reveal-delay: 0.28s">
+            <div class="work-card__img">
+              <img src="assets/img/img2.png" alt="Weiteres Werk aus der Atelierserie." />
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Lyrik</span>
+              <h3>Zwischenraum</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <footer id="contact" class="site-footer">
-        <div class="container footer__content">
+      <section id="disciplines" class="disciplines">
+        <div class="container">
+          <header class="section-header section-header--center reveal">
+            <p class="eyebrow">Disziplinen</p>
+            <h2>Drei Sprachen der Kunst</h2>
+          </header>
+          <div class="disciplines__grid">
+            <article class="disc-card reveal" style="--reveal-delay: 0.08s">
+              <div class="disc-card__symbol" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="20" cy="11" rx="6" ry="2.5"/>
+                  <path d="M14 11 Q5 21 9 32 Q13 38 20 38 Q27 38 31 32 Q35 21 26 11"/>
+                  <ellipse cx="20" cy="36" rx="8" ry="3"/>
+                </svg>
+              </div>
+              <h3>Töpferei &amp; Keramik</h3>
+              <p>Auf der Drehscheibe geformtes Steinzeug mit matten Glasuren. Inspiriert von Flusskieseln, regendurchtränktem Boden und dem sanften Schimmer des Morgenlichts.</p>
+              <a class="disc-card__link" href="toepferei.html">Mehr erfahren →</a>
+            </article>
+            <article class="disc-card reveal" style="--reveal-delay: 0.18s">
+              <div class="disc-card__symbol" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34 7 C34 7 10 16 8 36"/>
+                  <path d="M8 36 C14 30 24 22 32 11"/>
+                  <path d="M8 36 L10 28"/>
+                  <line x1="8" y1="36" x2="14" y2="34"/>
+                </svg>
+              </div>
+              <h3>Lyrik &amp; Sprache</h3>
+              <p>Leise Verse, verwoben mit Feldaufnahmen, Atem und Erinnerung. Herausgegeben als limitierte Letterpress-Editionen und gesprochene Klangpoesie.</p>
+              <a class="disc-card__link" href="lyrik.html">Mehr erfahren →</a>
+            </article>
+            <article class="disc-card reveal" style="--reveal-delay: 0.28s">
+              <div class="disc-card__symbol" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M28 6 L34 12 L14 32 L6 34 L8 26 Z"/>
+                  <line x1="26" y1="8" x2="32" y2="14"/>
+                </svg>
+              </div>
+              <h3>Zeichnung &amp; Grafik</h3>
+              <p>Atmosphärische Linienbilder und Druckgrafiken, die Ritual, Wiederholung und die haptische Schönheit des Ateliers im Entstehen festhalten.</p>
+              <a class="disc-card__link" href="zeichnung.html">Mehr erfahren →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about__media">
+          <img src="assets/img/silvia.png" alt="Porträtfoto von Silvia Föger in ihrem Atelier." />
+        </div>
+        <div class="about__text reveal">
+          <p class="eyebrow">Über mich</p>
+          <h2>In der Heimat verwurzelt,<br /><em>vom Gefühl geführt</em></h2>
+          <div class="about__rule" aria-hidden="true"></div>
+          <p>Aufgewachsen zwischen alpinen Wiesen und pulsierendem Stadtlicht, verwebt Silvia rohe Texturen und warme Töne zu sinnlichen Objekten. Jedes Gefäß, jedes Gedicht und jede Zeichnung lädt dazu ein, innezuhalten und die Poesie des Alltags neu zu entdecken.</p>
+          <p>Seit über einem Jahrzehnt arbeitet sie in ihrem Atelier in Innsbruck, Tirol — einem Ort, an dem die Stille der Berge auf die Wärme des Feuers trifft.</p>
+          <a class="btn-outline" href="#contact">Kontakt aufnehmen</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container">
+        <div class="footer__inner">
           <div class="footer__brand">
-            <a class="brand" href="#hero">Silvia Föger</a>
-            <p>Handgemachte Keramik, Poesie und Fotografien aus Tirol, Österreich.</p>
+            <img class="footer__logo" src="assets/img/logo.png" alt="Silvia Föger Spirale Logo" />
+            <p class="footer__tagline">Handgemachte Keramik, Poesie<br />und Zeichnungen aus Tirol.</p>
           </div>
-          <div class="footer__links">
-            <div>
-              <h4>Besuch</h4>
-              <p>
-                Atelierbesuche nach Vereinbarung.<br />
-                Innsbruck, Tirol
-              </p>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Atelier</h4>
+              <p>Atelierbesuche nach Vereinbarung.</p>
+              <p>Innsbruck, Tirol, Österreich</p>
             </div>
-            <div>
+            <div class="footer__col">
               <h4>Kontakt</h4>
               <a href="mailto:studio@silviafoeger.com">studio@silviafoeger.com</a>
               <a href="tel:+436605551234">+43 660 555 1234</a>
             </div>
-            <div>
+            <div class="footer__col">
               <h4>Folgen</h4>
               <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
               <a href="https://pinterest.com" target="_blank" rel="noreferrer noopener">Pinterest</a>
@@ -159,12 +211,10 @@
           </div>
         </div>
         <div class="footer__legal">
-          <div class="container">
-            <small>© <span id="copyright-year"></span> Silvia Föger. Alle Rechte vorbehalten.</small>
-          </div>
+          <small>© <span id="copyright-year"></span> Silvia Föger. Alle Rechte vorbehalten.</small>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
   </body>
