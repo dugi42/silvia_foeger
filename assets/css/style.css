@@ -111,12 +111,6 @@ a {
 .brand__logo {
   height: 40px;
   width: auto;
-  filter: drop-shadow(0 0 6px var(--gold-glow));
-  transition: filter 0.3s ease;
-}
-
-.brand__logo:hover {
-  filter: drop-shadow(0 0 12px rgba(201, 164, 85, 0.55));
 }
 
 .nav-links {
@@ -589,7 +583,6 @@ a {
 .footer__logo {
   height: 60px;
   width: auto;
-  filter: drop-shadow(0 0 10px rgba(201, 164, 85, 0.38));
 }
 
 .footer__tagline {
