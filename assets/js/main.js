@@ -26,6 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
+
+    // Expose header height so sticky elements can sit flush beneath it
+    const setHeaderHeight = () => {
+      document.documentElement.style.setProperty(
+        "--header-h",
+        `${header.offsetHeight}px`
+      );
+    };
+    window.addEventListener("resize", setHeaderHeight);
+    setHeaderHeight();
   }
 
   // Reveal on scroll
@@ -43,6 +53,60 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     reveals.forEach((el) => observer.observe(el));
+  }
+
+  // Poem archive: band filter + text search
+  const archive = document.getElementById("poem-archive");
+  if (archive) {
+    const cards = Array.from(archive.querySelectorAll(".poem-leaf"));
+    const buttons = Array.from(archive.querySelectorAll(".poem-filter__btn"));
+    const input = archive.querySelector(".poem-search__input");
+    const countEl = archive.querySelector(".poem-archive__count");
+    const emptyEl = archive.querySelector(".poem-archive__empty");
+    const haystack = new Map(cards.map((c) => [c, c.textContent.toLowerCase()]));
+    let band = archive.querySelector(".poem-filter__btn.is-active").dataset.band;
+
+    const apply = () => {
+      const query = input.value.trim().toLowerCase();
+      let shown = 0;
+
+      cards.forEach((card) => {
+        const visible =
+          card.dataset.band === band &&
+          (!query || haystack.get(card).includes(query));
+        card.hidden = !visible;
+        if (visible) shown += 1;
+      });
+
+      countEl.textContent = shown === 1 ? "1 Gedicht" : `${shown} Gedichte`;
+      emptyEl.hidden = shown > 0;
+    };
+
+    const anchor = archive.querySelector(".poem-nav__anchor");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        band = btn.dataset.band;
+        buttons.forEach((other) => {
+          const isActive = other === btn;
+          other.classList.toggle("is-active", isActive);
+          other.setAttribute("aria-selected", String(isActive));
+        });
+        apply();
+
+        // Jump back to the nav so a shorter band never strands the reader past
+        // the end of the list. Measured off the static anchor, since a stuck
+        // sticky element reports its pinned position, not its natural one.
+        const navTop = anchor.getBoundingClientRect().top + window.scrollY;
+        const target = navTop - (header ? header.offsetHeight : 0);
+        if (window.scrollY > target) {
+          window.scrollTo({ top: target, behavior: "smooth" });
+        }
+      });
+    });
+
+    input.addEventListener("input", apply);
+    apply();
   }
 
   // Copyright year

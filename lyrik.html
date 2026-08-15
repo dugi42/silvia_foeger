@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.0" />
   </head>
   <body>
 
@@ -33,7 +33,6 @@
             <a href="index.html#works">Werke</a>
             <a href="index.html#disciplines">Disziplinen</a>
             <a href="index.html#about">Über mich</a>
-            <a href="index.html#contact">Kontakt</a>
           </div>
         </nav>
       </div>
@@ -52,7 +51,7 @@
       <section class="page-hero">
         <div
           class="page-hero__bg"
-          style="background-image: url('assets/img/IMG_3065.jpg');"
+          style="background-image: url('assets/img/toepferei/IMG_3065.jpg');"
           role="img"
           aria-label="Künstlersiegel von Silvia Föger"
         ></div>
@@ -73,44 +72,260 @@
             <div class="page-intro__text reveal" style="--reveal-delay: 0.15s">
               <h2>Sprache als <em>stilles Material</em></h2>
               <div class="page-intro__rule" aria-hidden="true"></div>
-              <p>Silvia schreibt Gedichte, die nicht erklären — sie zeigen. Worte, die sich an Klang anlehnen, an Atem, an das lange Schweigen zwischen zwei Sätzen. Ihre Verse entstehen langsam, wie Ton auf der Scheibe: im Widerstand gegen das Offensichtliche.</p>
+              <p>Silvia schreibt Gedichte, die nicht erklären — sie zeigen. Worte, die sich an Klang anlehnen, an Atem, an das lange Schweigen zwischen zwei Sätzen. Ihre Verse entstehen langsam, wie Ton unter den Händen: im Widerstand gegen das Offensichtliche.</p>
               <p>Ihre Texte erscheinen in limitierten Letterpress-Editionen, handgesetzt auf Büttenpapier gedruckt. Daneben entstehen Klanggedichte: aufgenommen in der Stille des Ateliers, im Wind, auf alpinen Wegen.</p>
-              <p>Editionen sind auf Anfrage erhältlich. Lesungen nach Vereinbarung.</p>
+              <p>Editionen sind auf Anfrage erhältlich.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="page-booklet">
+      <section class="page-booklet" id="poem-archive">
         <div class="container">
           <header class="section-header reveal">
             <p class="eyebrow">Gedichte</p>
             <h2>Aus dem Wortarchiv</h2>
           </header>
+
+        </div>
+
+        <div class="poem-nav__anchor" aria-hidden="true"></div>
+        <nav class="poem-nav" role="tablist" aria-label="Gedichtbände">
+          <div class="poem-nav__inner">
+            <button class="poem-filter__btn is-active" type="button" role="tab" aria-selected="true" data-band="sehnsucht">Band I · Sehnsucht</button>
+            <button class="poem-filter__btn" type="button" role="tab" aria-selected="false" data-band="hoffnung">Band II · Hoffnung</button>
+            <button class="poem-filter__btn" type="button" role="tab" aria-selected="false" data-band="kindergedichte">Band III · Kindergedichte</button>
+          </div>
+        </nav>
+
+        <div class="container">
+
+          <div class="poem-tools reveal">
+            <div class="poem-search">
+              <label class="sr-only" for="poem-search-input">Gedichte durchsuchen</label>
+              <input id="poem-search-input" class="poem-search__input" type="search" placeholder="Titel oder Zeile suchen …" autocomplete="off" />
+            </div>
+            <p class="poem-archive__count" aria-live="polite"></p>
+          </div>
+
+          <p class="poem-archive__empty" hidden>Keine Gedichte gefunden.</p>
+
           <div class="poems-list">
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.05s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Alleine gehen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Kaum vorstellbar den Weg nun alleine zu gehen.<br />Möchte gern davonlaufen<br />von dieser Einsamkeit,<br />den leeren Stunden.<br />Kaum zu ertragen den Atem nicht mehr zu spüren,<br />möchte gern im Traum versinken.<br />Kaum auszuhalten, dir nie wieder zu begegnen,<br />danke für alles, was war.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Antworten</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich suche nicht nach Antworten,<br />in dieser überlauten Welt.<br />Der Wind wird die Ernte<br />zu dir tragen,<br />und Friede möge dein Herz<br />nie mehr verlassen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Augenblicke</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Augenblick</p>
+                <p>Den Augenblick gilts zu genießen.<br />Der Moment hält den Atem an.<br />Der Traum von „Immer“ zu früh geplatzt.<br />Die Endlichkeit annehmen,<br />so unglaublich schwer.<br />Traurig, sehnsüchtig, herzzerreißend,<br />und hoffnungsvoll auf ein Neues.<br />Dein Lachen hat jede Mauer durchbrochen,<br />mein Herz in der Mitte getroffen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Aus dem Gleichgewicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Aus dem Gleichgewicht,<br />und du bist im Lot.<br />Aus dem Gleichgewicht,<br />kein Ruder, kein Boot.<br />Wanke alleine durch diese Zeit,<br />keine Antwort bereit.<br />Aus dem Gleichgewicht,<br />nur Bilder von dir.<br />Aus dem Gleichgewicht,<br />keine Hoffnung auf<br />„WIR“!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Aushalten</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Aushalten war angesagt.<br />Tage der Schwere füllten den Raum.<br />Aushalten war angesagt,<br />Momente der Hoffnung gabs kaum.<br />Aushalten war angesagt,<br />eine Geschichte, unfassbar lang.<br />Aushalten und halten ein dunkler Gang.<br />Aus und halten traf tief ins Herz.<br />Die Kraft zu Ende, der Halt nicht mehr da.<br />Halten und aus, du hast entschieden.<br />Bist leise voran in eine Welt,<br />nur Frieden.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Bis nimmer</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Bis nimmer geht,<br />werd ich an dich denken.<br />Bis nimmer geht,<br />werd ich von dir erzählen.<br />Bis nimmer geht,<br />wird meine Liebe dich einhüllen.<br />Bis nimmer geht,<br />werden Bilder von dir mich tragen,<br />bis dort hin, wo wir uns wieder finden.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Blumenregen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Auf der anderen Seite wird’s Blumen regnen,<br />und Herzen duften nach dir so süß.<br />Alle Wege zur Sonne und ohne Stein.<br />Dein Lachen begrüßt mich,<br />ich gleite heim.<br />Zu dir für immer,<br />keine Tränen mehr.<br />Wir bleiben verbunden,<br />ich freu mich so sehr.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Daheim</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Tiefe in mir wächst,<br />es nährt mich dein Sein.<br />Ein seltsamer Frieden<br />füllt meine Tage,<br />wann bin ich daheim?</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Danke fürs Dasein</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
                 <p>Danke fürs Dasein,<br />fürs Zuhören, fürs Fragen<br />und Lachen.</p>
                 <p>Danke fürs Warten<br />und andere Sachen.</p>
                 <p>Für Geduld und Verständnis,<br />Vertrauen und mehr.<br />Wenn du Lust hast,<br />dann komm einfach wieder mal her.</p>
-                <p>An den Ort, wo so Vieles und Schönes geschah.<br />Danke für DICH und für alles was war.</p>
+                <p>An den Ort, wo so Vieles und Schönes geschah.<br />Danke für dich und für alles was war.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Das Fenster weit offen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Fenster weit offen, viel Sonne in mir,<br />den Wind auf der Haut, die Nähe von dir.<br />Mög es immer so sein, das Rauschen der Bäume,<br />doch ward einst verflogen der Wunsch alle Träume.<br />Das Fenster ging zu, ganz langsam und sacht.<br />Der Raum ward so leer, so still über Nacht.<br />Kein Rufen, kein Blick, kein Heben der Hände,<br />nur lautlose Augen und Tränen ohne Ende.<br />Nie mehr wird’s so sein, wie damals die Zeit,<br />eine Botschaft vom Himmel die Sehnsucht so weit.<br />Mögen Engel mein Fenster für dich halten offen,<br />dann darf ich vielleicht auf ein Wiedersehn hoffen.<br />Und der Engel der Sehnsucht uns beide vereint,<br />wird das Fenster geschlossen für alle Zeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Das Kaleidoskop</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Kaleidoskop meiner Gefühle<br />spiegelt so viel Buntes,<br />es zerreißt die Bilder,<br />formt neues Licht.<br />Manche Muster und Schatten<br />legen Wolken über mich,<br />doch deine Energie schenkt<br />endliche Erinnerung an dich.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Das Leuchten</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Im Tiefschlaf die Freude,<br />das Glück gut verpackt.<br />Die Hoffnung auf Leben,<br />der letzte Akt.<br />Erwachen, erwecken<br />von neuer Energie.<br />Wann kommt sie wieder?<br />Die Freude …wohl nie.<br />Mit dir leis gegangen,<br />ins ewige Licht.<br />Für dich mag es leuchten,<br />für mich noch nicht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Das Schöne</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
-                <p>Das Schöne leuchtet oft erst zu spät!<br />Aber dafür Herz zereißend.</p>
+                <p>Das Schöne leuchtet oft erst zu spät!<br />Aber dafür herzzerreißend.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.1s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Das Talent</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Talent dein Herzklopfen immer zu hören.<br />Die Begabung den Rhythmus nie zu verlieren.<br />Die Hoffnung diesen Wunsch im Herzen zu tragen,<br />und alle Zeit diesen Klang zu spüren.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Das zarte Licht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ein Lebensfeuer jetzt verloren,<br />es brennt nur noch ein zartes Licht.<br />Möge es brennen, als Zeichen unserer Liebe,<br />das niemals bricht.<br />Vielleicht das Leuchten nie wieder groß,<br />unserer Seelen lassen sich niemals los.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Dein Lachen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Lachen</p>
+                <p>Ich habe mich in dein Lachen verliebt,<br />war Passagier an deiner Seite.<br />Dieser Hauch von Schweben,<br />ein gemeinsamer Flug.<br />So viele Höhen und Tiefen,<br />was ist noch geblieben?<br />Ein reichhaltiger Schatz für alle Zeit,<br />und Wehmut, weil nie mehr zu zweit.<br />Doch es war wunderschön,<br />und unsere Liebe…sie bleibt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Deine Welt</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Muss dir die Welt wohl gönnen,<br />ohne Schmerz, Angst und Leid.<br />Will dich ziehen lassen,<br />unendlich weit.<br />Und hier auf Erden<br />so leer der Platz,<br />ich hüte die Stille,<br />unseren goldenen Schatz.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Den Moment im Herzen eingefroren</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Den Moment im Herzen<br />eingefroren,<br />die Liebe und Hoffnung stets neu geboren.<br />Die Spuren von einst so stark und hier.<br />Das ganze Leben ein klares<br />„WIR“.<br />Das WIR begleitet Raum und Zeit.<br />Ein Augenblick<br />zur Akzeptanz bereit.<br />Zwei Herzen füreinander geboren,<br />unendliche Liebe geht nie verloren.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Der Moment</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Unser Moment wird nie vorbei sein.<br />Unser Moment ist ewig in uns.<br />Unseren Moment den kennen nur wir.<br />Unvergessen, phantastisch.<br />Unser Geheimnis,<br />ein klares WIR.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Der Schlüssel</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Den Schlüssel zur Endlichkeit im Traum entdeckt,<br />nur leider nicht mitgenommen.<br />Die Sehnsucht im Herzen stets festgehalten,<br />im Traum wie im Leben zu mir gekommen.<br />Dein Blick, dein Duft,<br />deine Stimme, dein Alles.<br />Der Schlüssel zum Glück in uns beiden verborgen,<br />erschließt jede Tür, jeden Wunsch und versperrt Sorgen.<br />Nur wir beide haben das Schloss dafür,<br />unsere Liebe öffnet jede Tür.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Der Versuch</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Versuch, das Leben als Glück zu empfinden,<br />scheitert kläglich.<br />Der Versuch, ohne dein Lachen die Zeit zu fassen,<br />scheint schier unmöglich.<br />Der Versuch, unsere Liebe unendlich zu halten,<br />ist das, was bleibt von dieser Reise mit dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Der Weg</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Und plötzlich strahlt meine Welt nicht mehr rosarot.<br />Wolken, tausend Tränen und unerfüllte Hoffnung schwebt im Raum.<br />Bis uns die Gewissheit erdrückt und nichts ist mehr, wie es einmal war.<br />Unsagbare Traurigkeit, Verzweiflung und Angst.<br />Aber die Erde dreht sich weiter,<br />der Weg … wer weiß… wo hin<br />er führt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Farbe des Lebens wieder spüren</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>den Duft der Einsamkeit ertragen,<br />die Fülle an Liebe niemals loslassen.<br />Der Schlag des Herzens abgespeichert<br />für immer und ewig.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Illusion dein Herz wieder klopfen zu sehen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>hält mich lebendig, lässt mich weitermachen.<br />Die Gewissheit, dass ich den Rhythmus an den Himmel verloren,<br />macht betroffen und traurig.<br />Die Dankbarkeit mit dir einen langen Herzensweg geflogen zu sein,<br />trägt mich durch eine Zeit<br />ohne dich.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Insel</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Meine Insel so wild überflutet,<br />mit Wellen phantastisch hoch.<br />Meine Insel erdrückt,<br />von Momenten der Schwere.<br />Wenn auf meiner Insel wieder Sonne,<br />vielleicht irgendwann,<br />wenn Tränen trocknen,<br />und dein Lachen mich bedeckt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Ruhe</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Ruhe in mir,<br />die stille Gewissheit,<br />dass du immer bei mir bist.<br />Die Leichtigkeit dich tragen zu dürfen,<br />führt meine Schritte dort hin,<br />wo Ruhe und Stille<br />im Fluss unserer Zeit sich verbinden.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Die Spirale</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
@@ -118,52 +333,511 @@
                 <p>Am Schneckenhaus und auch am Baum,<br />Spiralen sehe ich auch im Traum.</p>
                 <p>Und wenn ich sie nicht finden kann,<br />dann fang ich sie zu malen an.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Stille</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Muss dir die Welt wohl gönnen,<br />ohne Schmerz, Angst und Leid.<br />Will dich ziehen lassen,<br />unendlich weit.<br />Und hier auf Erden<br />so leer der Platz,<br />ich hüte die Stille,<br />unseren goldenen<br />Schatz.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Die Unendlichkeit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Unendlichkeit noch nicht begegnet,<br />viel Liebe dafür still getragen.<br />Die Hoffnung tausend Augenblicke gesucht,<br />und tausend Tränen im Dunkel versteckt.<br />Die Endlichkeit nicht haben wollen,<br />doch sie ein Teil vom Ganzen ist.<br />Die Liebe ein Leben lang festhalten,<br />unendlich dieses Gefühl.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Ein Augenblick der Seelenruhe</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ist besser als alles, was du sonst erstreben magst.<br />(aus Persien)</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Ein Punkt auf Erden</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Liebe<br />Bin nur ein kleiner Punkt auf Erden,<br />zu bleiben gebeten.<br />Du hast die Reise schon angetreten.<br />Alleine, ohne mich!<br />Bin jetzt noch da, um Steine zu finden,<br />und Regen zu trinken,<br />und dem Wind zu winken.<br />Kann die Tage ohne dich kaum ertragen,<br />hätte heut an dich so viel Fragen.<br />Meine Antwort auf dich,<br />„ewige Liebe für mich!“</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Endlichkeit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Den Schlüssel zur Endlichkeit im Traum entdeckt.<br />Nur leider nicht mitgenommen.<br />Die Sehnsucht im Herzen stets festgehalten,<br />im Traum wie im Leben zu mir gekommen.<br />Dein Blick, dein Duft,<br />deine Stimme, dein Alles.<br />Der Schlüssel zum Glück in uns beiden verborgen.<br />Erschließt jede Tür, jeden Wunsch und versperrt Sorgen.<br />Nur wir beide haben das Schloss dafür,<br />unsere Liebe öffnet jede Tür.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Entdeckungsreise mit dir</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wollt mit dir noch so viele Sterne entdecken,<br />und tausend Funken erleben.<br />Wollt den Regenbogen fangen,<br />das Meer dir schenken,<br />und alles Leid in Sonnenstrahlen lenken.<br />Du konntest nicht warten,<br />bist zu schnell voran.<br />Ich bin allein,<br />hab so Vieles getan.<br />Für dich, für uns,<br />es wird ewig bestehen.<br />Unsere Liebe wird niemals vergehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Erinnerung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Unberechenbar fahren meine Gefühle im Karussell.<br />Viel dunkle Tage, nur sekundenweis hell.<br />Keine Umarmung deiner Hände,<br />Die Sehnsucht nach dir nimmt kein Ende.<br />Hüll mich ein in Erinnerung,<br />von damals so zart,<br />und nehm sie jetzt auf<br />die alleinige Fahrt.<br />Ohne Berührung, ohne Atem,<br />ohne Blicke von dir,<br />versuch mich alleine … und doch mit dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Erwartung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Oft gedacht, nur alleine auf dieser Welt mit dir.<br />Oft gehofft, alles wird gut,<br />und das Leid nicht mehr hier.<br />Zu viel erwartet, den Plan nicht erfüllt.<br />Das Ende von uns, ein Traum enthüllt.<br />Du hast hinterlassen auf dieser Erde,<br />traumhafte Schätze… und Friede werde.<br />Ich muss begreifen, dass du nur voraus,<br />für mich mein Auftrag noch nicht aus.<br />Wenn mein Weg dann zu Ende hier,<br />gibt’s für uns ein neues WIR.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Farbspuren</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Farbe des Lebens wieder entdeckt.<br />Den Duft der Einsamkeit langsam ausgeatmet.<br />Die Fülle der Liebe niemals losgelassen.<br />Nie weg,<br />nur hin,<br />und doch so nah.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Farbtupfer</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Farbtupfer im Traum,<br />warmer Regen küsst meine Haut.<br />Du warst mein Himmel und so vertraut.<br />Fülltest all meine Tage mit Sonne und Flut,<br />wollt den Weg nur mit dir …mal schwer und mal gut.<br />Bis der Himmel klopft an dich abzugeben,<br />so unglaublich leer ohne dich,<br />dieses Leben.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Gedanken</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Kein „Aber“, kein „Warum“,<br />kein „Jetzt“ und kein „Hier“.<br />Bin im Gedanken immer bei dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Gegangen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Gegangen und so viel geblieben.<br />Gehalten und so viel verloren.<br />Getragen und so viel Leichtigkeit im Herzen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Getragen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Du hast mich getragen,<br />hab mich fallen gelassen.<br />Das Meer aller Tränen durchlebt.<br />Die Kraft unserer Liebe stark,<br />und das Band unserer Liebe unendlich.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Gleichgewicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Aus dem Gleichgewicht,<br />und du bist im Lot.<br />Aus dem Gleichgewicht,<br />kein Ruder …Boot.<br />Wanke alleine durch diese Zeit,<br />keine Antwort bereit.<br />Aus dem Gleichgewicht,<br />nur Bilder von dir.<br />Aus dem Gleichgewicht,<br />keine Hoffnung auf WIR.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Greifbar</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Es ist nicht zu greifen,<br />was alles geschah.<br />Momente des Zaubers,<br />ein Traum wurde wahr.<br />Aus Blicken wurde Liebe,<br />eine märchenhafte Zeit.<br />Doch das Leben hielt auch<br />Schweres bereit.<br />Getragen, gehalten,<br />bis die Kraft nicht mehr war.<br />Ein Weg ging zu Ende,<br />die Leere war da.<br />Die Blase zu füllen<br />mag Botschaften senden,<br />und Traurigkeit einmal in<br />Dankbarkeit wenden.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Herzklopfen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Herzklopfen immer,<br />es hört nie auf.<br />Ein Beben der Seele,<br />ein zarter Hauch.<br />Von Hoffnung und Liebe<br />Aus ferner Zeit.<br />Bin einfach gebrochen,<br />und nicht bereit.<br />Zu leben, zu gehen,<br />zu suchen nach Licht.<br />Du bist meine Flamme,<br />die Bindung nie bricht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Hoamgehn isch wie fallen in ein Loch</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Aufsperren und i riach di noch.<br />Hab so viel gehofft, und gebetet,<br />geweint und geflucht<br />und Trost in der Stille gesucht.</p>
+                <p>Hoamgehn isch wie fallen in ein Loch,<br />aufsperren und i siag di noch.<br />Hab für dich viele Freunde geladen,<br />gebacken gekocht,<br />ein Lachen von dir, dein Herz es pocht.</p>
+                <p>Hoamgehen isch wie fallen in a Loch,<br />aufsperren und i spür di noch,<br />hab mit dir den unsagbaren Kampf verloren,<br />so viele Wünsche unerfüllt geboren.</p>
+                <p>Wann irgendwann hoamgehen zur Freude führt,<br />und aufsperren meine Seele berührt,<br />bin i dir näher als je zuvor,<br />und unsere Liebe öffnen ein weites Tor.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Hoffnung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Den Moment im Herzen eingefroren,<br />die Hoffnung und Liebe nie verloren.<br />Die Spuren von einst so stark und hier,<br />das ganze Leben ein klares WIR.<br />Das WIR begleitet Raum und Zeit,<br />im Augenblick zur Akzeptanz bereit.<br />Sehnsucht und Friede uns zusammenführen,<br />magische Momente uns dann berühren.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Ich bin</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Bin nicht mehr die,<br />die ich einmal war.<br />Fühl nicht mehr das,<br />wie einst.<br />Spür nicht mehr das,<br />was mir so sehr fehlt.<br />Höre oft Stimmen im Traum,<br />lass dich nie allein,<br />will immer bei dir sein.<br />Bin nur noch hier, um hier zu sein,<br />für die,<br />die unsere Geschichte weiterschreiben,<br />für unsere Liebsten, die bleiben.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Ich träume</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich höre deine Stimme, auch wenn Schweigen den Raum füllt.<br />Ich sehe deine Augen, auch wenn alle Farben im Wind verblassen.<br />Ich spüre deine Haut, wie damals, warm und so vertraut.<br />Und wenn der Traum zu Ende,<br />kleben alle Erinnerungen wie ein Pflaster auf meiner Haut.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Im Wald da find ich Stille</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
                 <p>Im Wald da find ich Stille,<br />Moos und auch den Baum.<br />Im Wald da find ich Ruhe,<br />Lautes und Schrilles wohl kaum.</p>
                 <p>Im Wald da lerne ich lauschen,<br />schauen, staunen und mehr.<br />Vielleicht komm ich bald schon wieder<br />zu diesem Fleckchen Erde her.</p>
-                <p>Ich möchte noch so Vieles entdecken,<br />erforschen, finden und greifen.<br />Im Wald gibt's so viel zu erleben,<br />zu freuen, zu bewundern und reifen.</p>
+                <p>Ich möchte noch so Vieles entdecken,<br />erforschen, finden und greifen.<br />Im Wald gibt&#x27;s so viel zu erleben,<br />zu freuen, zu bewundern und reifen.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
-              <h3 class="poem__title">So wertvoll wie eine Rose</h3>
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Lärm in der Stille</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
-                <p>So wertvoll wie eine Rose,<br />sind Kinder unserer Zeit.<br />So zerbrechlich wie Rosenblätter,<br />so liebevoll und bereit.</p>
-                <p>Bereit zum Wachsen und Reifen,<br />zum Gehen und zum Schauen,<br />wo auf der Erde Plätze,<br />um Rosenschlösser zu bauen.</p>
-                <p>Wir wollen die Kinder führen,<br />ganz sachte und so fein.<br />Denn Kinder unserer Erde<br />wollen selbständige Rosen sein.</p>
+                <p>In dieser Stille war so viel Lärm,<br />und du bist.<br />In dieser Leere war so viel Liebe,<br />und du bist.<br />In diesem Weinen war so viel Hoffnung,<br />denn du bist.<br />Die Freude und meine Stärke,<br />du bist immer dort,<br />wo wir sind.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
-              <h3 class="poem__title">Halten</h3>
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Laufen</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
-                <p>Und halte alles im Arm was dir lieb ist.<br />Umarme die Welt,<br />lass alles los was dich bedrückt.</p>
-                <p>Und du wirst sehen,<br />deine Füße tragen dich über Wolken.</p>
+                <p>Ich laufe nach dir<br />Dein Lachen vermiss ich so sehr.<br />Das Strahlen deiner Augen,<br />keine Blicke mehr.<br />Deine Güte, deine Liebe<br />brennt für mein Herz.<br />Kaum zu ertragen,<br />der tägliche Schmerz.<br />Ich schau deine Bilder,<br />dreh die Jahre zurück,<br />wünsche mir sehnlichst<br />deine Nähe zurück.<br />Muss wohl warten und hoffen,<br />gebe niemals auf,<br />dich wieder zu sehen,<br />ich laufe und lauf.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Leben</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Lebe jetzt,<br />und ganz im Augenblick,<br />mit dir im Herzen.<br />Lebe für immer in deiner<br />Herzenszeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Lebensfeuer</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ein Lebensfeuer jetzt verloren,<br />es brennt nur noch ein zartes Licht.<br />Möge es brennen, als Zeichen unserer Liebe,<br />das niemals bricht.<br />Vielleicht das Leuchten nie wieder groß,<br />unserer Seelen lassen sich niemals los.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Leichtigkeit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Irgendwann klopft mein Herz wieder Leichtigkeit.<br />Es findet Platz im Sein.<br />Der Wunsch zu pulsieren, fängt Farbe,<br />in guter Hoffnung, ich bin daheim.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Manchmal</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Manchmal, ja manchmal,<br />hilft uns der Moment<br />das Unglaubliche zu erfassen.<br />Es zu akzeptieren,<br />und mit Geduld und Stille<br />weiterzugehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Meilensteine</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Liebe bleibt,<br />auch wenn uns Meilensteine trennen.<br />Die Liebe hört nie auf,<br />Tränen fluten meine Wangen.<br />Die Liebe wächst, wie die Blumen den Garten schmücken.<br />Verwelkte Blüten wie Narben auf meiner Haut.<br />Die Liebe wie die Sonne,<br />schickt neue Farben auf mein Herz.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Mein Gedicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Du bist gegangen,<br />und ich gefallen,<br />so tief, so tief.<br />Du warst so still und voller Mut,<br />so stark, so stark.<br />Dein Blick so viel,<br />die Verzweiflung in mir.<br />Das Fehlen deiner Worte,<br />die Hoffnung auf Licht.<br />Hab so viel erwartet,<br />du warst mein Gedicht,<br />meine Worte im Leben.<br />Das Blatt ward gelöscht,<br />die Zeilen sie fehlen.<br />Nie wieder wird’s diese Lyrik geben.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Momentum</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Unser Moment wird nie vorbei sein.<br />Unser Moment ist ewig in uns.<br />Unseren Moment den kennen nur wir.<br />Unvergessen, phantastisch.<br />Unser Geheimnis</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Nebenan</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Nebenan, doch immer im Herzen.<br />Nebenbei, im Gedanken stets bereit.<br />Niemals vergessen, dein Rhythmus bleibt.<br />Verbundene Bilder, immer zu zweit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Neues Licht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Und wieder brennen Kerzen ohne dich.<br />Ich suche vergebens nach diesem Licht.<br />Der Schein im Raum so zart und leer.<br />Kein Blick von dir,<br />die Zeit so schwer.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Nie wieder</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Nie wieder „Guten Morgen, griaß die oder pfiati“.<br />Nie wieder schön, dass es dich gibt.<br />Nie wieder „Gute Nacht“.<br />Kann jemand begreifen,<br />was das mit mir macht!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Nochmal von vorne</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wenn ich nochmal von vorne,<br />würde ich wieder diese Reise wählen.<br />Vielleicht mit weniger Sorge um unnötige Dinge.<br />Öfters in die Sonne blicken,<br />den Regen auf meiner Haut tanzen lassen.<br />Mehr Berührung verteilen und zulassen.<br />Meine Tränen nicht mehr verstecken,<br />und die Welt küssen,<br />für all das Wunderbare, das mir zugeflogen.<br />Wenn ich nochmal von vorne,<br />würde ich mich wieder so sehr freuen<br />auf dich!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Ressource</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die zauberhafte Ressource mit dir gegangen zu sein,<br />erfüllt mein Dasein mit Sehnsucht,<br />nach dem, was war und nie wieder sein wird.<br />Und doch bemerkenswert heilsam,<br />an unseren Weg zu denken.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Rhythmus der Hoffnung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das unglaubliche Talent dein Herzklopfen für immer zu hören,<br />die Begabung den Rhythmus in Ewigkeit spüren,<br />die Hoffnung dieses phantastische Gefühl<br />im Herzen zu tragen<br />möge nie verloren gehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Rufen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich wünsche, ich könnt dich berühren.<br />Es hört nicht auf so weh zu tun.<br />Ich träumte, ich hätt dich wieder gesehen,<br />der Morgen bringt Wahrheit,<br />du bist im Gehen.<br />Ich rufe und will deine Antwort hier.<br />Doch Stille im Raum,<br />kein Wort von dir.<br />Hörst du mein Rufen,<br />die Sehnsucht nach dir,<br />sie brennt in mir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Samen der Freude</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das satte Grün<br />allein zu schauen,<br />macht traurig und trotzdem schön.<br />Das leise Weinen möge hilfreich sein,<br />die gesäten Samen in Freude wachsen zu sehen.<br />Die zarten Sonnenstrahlen umarmen deine Seele.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Schlüsselglück</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Den Schlüssel zur Endlichkeit im Traum entdeckt.<br />Nur leider nicht mitgenommen.<br />Die Sehnsucht im Herzen stets festgehalten,<br />im Traum wie im Leben zu mir gekommen.<br />Dein Blick, dein Duft,<br />deine Stimme, dein Alles.<br />Der Schlüssel zum Glück in uns beiden verborgen.<br />Erschließt jede Tür, jeden Wunsch und versperrt Sorgen.<br />Nur wir beide haben das Schloss dafür,<br />unsere Liebe öffnet jede Tür.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Seelenfenster</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Mein Seelenfenster fliegt auf und zu,<br />es findet einfach keine Ruh.<br />Sucht täglich nach dem Lebensstern,<br />er scheint so weit unendlich fern.<br />Wann macht er sich auf seine Reise,<br />in Größe und Liebe auf seine Weise.<br />Der Stern der einst mein Leben war,<br />nicht mehr zu finden,<br />nie wieder da.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Seelenzauber</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Herzklopfen immer,<br />es hört nie auf.<br />Ein Beben der Seele,<br />ein zarter Hauch.<br />Von Hoffnung und Liebe<br />aus ferner Zeit.<br />Bin einfach gebrochen,<br />und nicht bereit.<br />Zu leben, zu gehen,<br />zu suchen nach Licht.<br />Du bist meine Flamme,<br />die Bindung nie bricht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Sehnsucht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wann immer meine Sehnsucht<br />mich zu zerreißen droht,<br />fliegen Bilder von dir an mir vorbei.<br />Und dort, wo Steine deine Spuren bedecken,<br />dringt Licht und Neues ins Leben.<br />Wann immer aus diesem Licht<br />was Schönes entsteht,<br />weiß ich, du bist nicht fern,<br />nur tief in mir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Sein</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>So lang i no bin,<br />will i einfach no sein.<br />Allein ohne dich,<br />und trotzdem daheim.<br />Da wo wir alles erlebt,<br />die Kinder, das Haus,<br />Erinnerung bebt.<br />Sie wühlt alles auf,<br />es ist unglaublich schwer,<br />ohne dich zu sein,<br />du fehlst so sehr.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Sommergefühle</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Und wieder ein Sommer ohne dein Lachen.<br />Viel Sonne und trotzdem nur Kälte in mir.<br />Ein Garten voll Blumen,<br />doch farblos mein Blick,<br />denk sehnsüchtig an damals<br />…wo Wärme…zurück.<br />Wo Sommer so heiß,<br />und bunt unser Garten,<br />ich werde mit unendlicher Sehnsucht<br />auf das Wiedersehen warten.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Tagträume</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Tage wie Jahre,<br />Nächte wie im Traum.<br />Die Sehnsucht, dich zu treffen,<br />verfliegt, ist wie Schaum.<br />Momente der Verzweiflung,<br />so wenig Licht,<br />in einer Zeit<br />wo deine Nähe so fehlt,<br />nur Hoffnung sie bleibt.<br />Erinnerung mit dir<br />ist verankert und ruht.<br />Dein Vermächtnis lebt weiter,<br />und alles wird gut.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Tanzen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Hab das Tanzen verloren,<br />den Rhythmus verschenkt.<br />Die Liebe getragen,<br />den Herzschlag gelenkt.<br />Die leeren Tage,<br />mit Liebe gefüllt.<br />Dein Dasein im Herzen jetzt<br />eingehüllt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Und halte alles im Arm was dir lieb ist</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Umarme die Welt,<br />lass alles los was dich bedrückt.<br />Und du wirst sehen,<br />deine Füße tragen dich über Wolken.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Und wenn ab und zu meine Seele weint</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
-                <p>Und wenn ab und zu meine Seele weint,<br />und wenn ab und zu meine Augen trocknen,<br />Und wenn ab und zu mein Herz Berührung wünscht,<br />so bin ich nah, ganz nah daran<br />ein Kind zu sein.</p>
-                <p>Ein Kind das Lacht und weint,<br />und sich nach Liebe sehnt.<br />Heute, morgen,<br />gestern<br />und immer.</p>
+                <p>Seelenzeitfenster<br />Und wenn ab und zu meine Seele weint,<br />und wenn ab und zu meine Augen trocknen.<br />Und wenn ab und zu mein Herz Berührung wünscht.<br />So bin ich nah, ganz nah daran<br />ein Kind zu sein.<br />Ein Kind, das lacht und weint,<br />und sich nach Liebe sehnt.<br />Gestern, heute, morgen, und immer.</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
             </article>
 
-            <article class="poem-leaf reveal" style="--reveal-delay: 0.08s">
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Uns</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Diese leise Welle umspült meine Gedanken,<br />getragen von liebevoller Erinnerung,<br />an die Zeit von<br />UNS.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Unsere Melodie</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Töne im Rausch,<br />Takte wie Herzschlag,<br />melodisch und ruhig.<br />Und plötzlich die Stille,<br />kein Ton, kaum Takt,<br />keine Melodie.<br />Das Klingen vorbei,<br />kommt nie wieder.<br />Kommt nie mehr.<br />Wie mag dieser Weg<br />wieder Töne finden,<br />und Stille und Ruhe<br />mein Dasein erreichen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Vergissmeinnicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Tränen so warm, wie deine Haut.<br />Wünsche so viel, wie Blicke von dir.<br />Hoffnung, so stark wie unsere Liebe.<br />Leere, wie ein Fass ohne Boden,<br />gefüllt mit Gedanken, Gefühlen,<br />und Erinnerungen ohne Ende.<br />Und überall dort, wo deine Spuren zu sehen,<br />versuche ich neue Wege zu gehen.<br />Kleine Schritte ohne dich,<br />immer im Herzen,<br />vergiss mich bitte nicht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Verloren</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Verloren, wie ein Kind, das nach Nähe sucht.<br />Einsam, wie eine Seifenblase, alleine auf ihrem Weg.<br />Traurig, wie Menschen mit Schmerz und Sehnsucht.<br />Gehalten, wie die Freundschaft ihr festes Band,<br />loslassen, wie der Luftballon, der Freiheit wünscht.<br />Von Gefühlen umrandet, geschüttelt, getragen.<br />Eingebettet in Liebe und Hoffnung, dass es sich irgendwann<br />nicht mehr so traurig und einsam anfühlt,<br />weil ich loslassen musste und das Liebste verloren habe,<br />das mich so lange gehalten.<br />Meine Gefühle fühlen die Hoffnung und Liebe,<br />die ich als wunderbares Geschenk im Herzen trage.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Vertrau mir deine Geschichte</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Vertrau mir deine Geschichte, dein Herz.<br />Vertrau mir dein Leben, deine Liebe und Schmerz.<br />Vertrau mir alles, mein Herz schlägt für dich.<br />Es ist Weihnacht, vergiss das nicht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Verwandlung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Leere in mir mag irgendwann angenommen sein.<br />Die Leere in mir mag irgendwann befüllt werden.<br />Die Leere in mir möge als Schatz eingehüllt sein,<br />und alles, was uns im Leben geschenkt wurde,<br />sanft und dankbar eingebettet werden,<br />wie ein Juwel im Herzen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Warten</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Steinig die Wege, unendlich die Zeit.<br />Keine Antwort auf Fragen, nur Sehnsucht und weit,<br />die Spur deiner Tritte, dein Blick und dein Duft.<br />Keine Aussicht auf Begegnung,<br />deine Stimme sie ruft.<br />Nur Bilder im Kopf,<br />und Wünsche in der Luft.<br />Nur Hoffnung und Warten,<br />ist das, was bleibt,<br />von dieser leeren, verzweifelten Zeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Weine nicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Weine nicht, weil ich nicht bei dir bin.<br />Sei nicht traurig, weil du mich nicht sehen kannst.<br />Lächle, weil du an mich denkst!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wenn deine Augen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>mich nicht mehr suchen,<br />wenn deine Hände<br />mich nicht mehr rufen,<br />dann hör ich dich<br />ganz leise gehen.</p>
+                <p>Wenn der Seele Flügel wachsen<br />ist die Freiheit nahe.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wenn die Blumen Trauer tragen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>duften Rosen nur nach dir.<br />Wenn die Blumen Trauer tragen<br />möcht ich im Glas versinken.<br />Wenn die Blumen Trauer tragen<br />find ich dich im Traum.<br />Und irgendwann,<br />wenn die Blumen wieder Farbe strahlen,<br />bin ich wieder bei dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wenn ich nochmals von vorne</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>würde ich wieder diese Reise wählen.<br />Vielleicht mit weniger Sorge um unnötige Dinge.<br />Öfters in die Sonne blicken,<br />den Regen auf meiner Haut tanzen lassen.<br />Mehr Berührung verteilen und zulassen.<br />Meine Tränen nicht mehr verstecken,<br />und die Welt küssen,<br />für all das Wunderbare, das mir zugeflogen.<br />Wenn ich noch mal von vorne,<br />würde ich mich wieder so sehr freuen<br />auf dich!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wir</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Weinen wird leiser,<br />die Traurigkeit bleibt.<br />Das Meer der Tränen,<br />die Erinnerung schreibt.<br />Die Flut der Gefühle<br />sucht nur nach dir.<br />Die Botschaft zu kommen<br />und was bleibt sind wir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wollte noch mit dir</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wollt mit dir noch so viele Sterne entdecken,<br />und tausend Funken erleben.<br />Wollt den Regenbogen fangen,<br />das Meer dir schenken,<br />und alles Leid in Sonnenstrahlen lenken.<br />Du konntest nicht warten,<br />bist zu schnell voran.<br />Ich bin allein,<br />hab so Vieles getan.<br />Für dich, für uns,<br />es wird ewig bestehen.<br />Unsere Liebe wird niemals vergehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Wunder</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Wunder geliebt zu haben,<br />den Traum geliebt zu werden,<br />als Geschenk im Herzen zu bewahren,<br />und dankbar in die Verlängerung mitnehmen,<br />möge den Weg bereichern<br />bis zum Wiedersehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
               <h3 class="poem__title">Wünsche</h3>
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
@@ -172,7 +846,705 @@
                 <p>Wünsche sind oft zum Greifen nah,<br />und nicht jeder hat das Glück sie zu halten.</p>
                 <p>Dir wünsche ich Kraft genug um viele Wünsche<br />zu greifen,<br />zu halten<br />und<br />zu leben!</p>
               </div>
-              <p class="poem__author">Silvia Föger</p>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Zauberhaft</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Zauber der Liebe<br />flog mit deiner Seele davon.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Zeichen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Es duftet nach Flieder,<br />das ganze Dorf leer.<br />Der Himmel voll Wolken,<br />keine Aussicht mehr.<br />Ein Fackeln der Kerzen,<br />viele Fragen von mir.<br />Sie leuchten so helle,<br />glaub an Zeichen von dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="sehnsucht">
+              <h3 class="poem__title">Zeitreise</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Zeit für mich noch nicht vorbei.<br />Du hast deine Aufgabe schon erfüllt.<br />Ein langes Sein ward uns beschieden.<br />Du bist gegangen … für mich so schwer,<br />kann’s kaum begreifen,<br />du bist nicht mehr.<br />In diesem Leben bin ich jetzt allein,<br />muss tapfer ohne deine Nähe sein.<br />Die Liebe bleibt, viele Tränen im Hier,<br />im Gedanken ewig nur bei dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Blumenzeit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Zeit möge kommen,<br />wo wieder Blumen blühen,<br />wo Regen singt, und Tropfen glühen.<br />Wo Feuer fängt, das verletzte Sein.<br />Dann möge in mir einfach Friede sein.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Damals die Sonne so heiß</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>zur Zeit,<br />die Wärme im Herzen<br />und irgendwann<br />brennen wir<br />wieder gemeinsam.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Das Gefäß</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wie ein Gefäß, das neu gefüllt sein möchte,<br />fülle ich meine Tage mit neuer Nahrung.<br />Immer wieder Hunger nach etwas,<br />was nicht mehr kommt.<br />Tägliche Dankbarkeit für alles, was war.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Das Versprechen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ein Versprechen für immer</p>
+                <p>Das Gefühl, auserwählt zu sein, krönte mich zur Prinzessin.<br />Das Wissen, geliebt zu werden, formte unsere Zeit.<br />Das Versprechen, für immer und ewig, ist geblieben,<br />und lebt in mir und lässt mich fliegen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Die Freiheit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>auf dich zu warten,<br />bis dort hinzuleben,<br />nehme ich als Geschenk,<br />und es hüllt mich in<br />unendlicher Dankbarkeit ein.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Die Kraft</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Meine Kraft, alles zu tragen,<br />was nur uns gehört,<br />mein großes Geschenk.<br />Aber in der Nacht kommt der Regen.<br />Meine Hoffnung wieder zu finden,<br />was nur uns gehört,<br />ist mein größter Wunsch.<br />Aber in der Nacht kommen die Tränen.<br />Meine Liebe hüllt alles ein,<br />was nur wir wissen.<br />Es begleitet mich unendlich.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">DU</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich bin nicht mehr ich,<br />bin nur noch halb, ohne dich.<br />Du bist wieder du,<br />frei von Angst und Verlust.<br />Nur noch schweben,<br />dort, wo niemand weiß wo!<br />Einfach DU.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Du bist da</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Da wo es laut ist, freu ich mich.<br />Dort wo Lachen herrscht, bin ich dabei.<br />Überall wo Bewegung auftaucht, ist mein Herz zu Hause.<br />Und wenn meine Gefühle explodieren,<br />weiß ich, du bist da.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Energiereise</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Deine Energie begleitet den Schmerz,<br />füllt unentwegt die Leere in mir.<br />Mit Dankbarkeit lerne ich eine Reise zu beginnen,<br />die wir uns so nie erträumt haben.<br />In großer Stille …alleine,<br />und doch zu zweit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Feuerwerk</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ein Feuerwerk wollte es werden,<br />unser Dasein zu zweit.<br />Explosionen zierten unsere Zeit.<br />So viel Schönes, Zartes, Liebes,<br />und dann der Regen, der Sturm,<br />keine Sonne weit und breit.<br />Das Unglaubliche kaum zu fassen,<br />ein neuer Plan ward angedacht.<br />Momente der Verzweiflung<br />und noch die Hoffnung,<br />dass ein Engel über uns wacht.<br />Aber plötzlich diese Leere,<br />doch es bleibt nur ein Traum,<br />unsere Liebe hält und füllt jeden Raum.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Gute Nacht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Mond flüstert mir „Gute Nacht“,<br />ich glaube, du hörst zu.<br />Die Sterne beleuchten meine Spur,<br />ich glaube, das bist du.<br />Die Sonne wärmt mein Herz,<br />ich weiß, du nimmst meinen Schmerz.<br />Und wenn der Regenbogen mich küsst,<br />dann weiß ich, dass du glücklich bist.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Ich bin</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>ich werde,<br />ich war,<br />damals mit dir,<br />und heute mit dir in mir.<br />Meine Liebe bleibt<br />sie strahlt für immer.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Manchmal</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Manchmal bin ich zurück,<br />ein vager Blick.<br />Manchmal such ich nach dir,<br />im Jetzt und Hier.<br />Manchmal weiß ich,<br />du bist da,<br />wie wunderbar.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Neuland</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>In mir brennt ein Feuer,<br />das niemand löschen kann.<br />Meine Schritte betreten Neuland,<br />wann komm ich wieder an?<br />In mir leuchten Sterne,<br />die nur ich fühlen kann,<br />die Wege so endlos,<br />wann komm ich irgendwo an?<br />In mir wird’s so still,<br />dein Atem hüllt mich ein.<br />Ein Zeichen von dir,<br />ist alles, was ich will.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Ressource</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die zauberhafte Ressource,<br />mit dir geflogen zu sein,<br />erfüllt mein Dasein mit Sehnsucht,<br />nach dem, was war,<br />und nie wieder sein wird.<br />Es ist bemerkenswert heilsam,<br />an unseren Weg zu denken,<br />das Geheimnis einer Reise,<br />welches uns niemals trennt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Rosenduft</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Und die Rosen duften wieder nach Sommer.<br />Die Farben riechen wieder nach mehr.<br />Der Hunger nach Leben<br />hat mich wieder.<br />Und der Wind streichelt meine Haut,<br />als hätte es nie Sturm gegeben.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Schweigen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Gemeinsam Schweigen<br />beflügelt unsere Liebe.<br />Ohne Worte zu sprechen,<br />Gedanken im Austausch der Stille.<br />Und das Leisesein schenkt uns<br />den lauten Tanz unserer Zeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Und irgendwann</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Meine Kraft alles zu tragen,<br />was nur uns gehört,<br />ist mein größtes Geschenk.<br />Aber in der Nacht kommt der Regen.</p>
+                <p>Meine Hoffnung wieder zu finden,<br />was nur uns gehört,<br />ist mein größter Wunsch.<br />Aber in der Nacht kommen Träume.</p>
+                <p>Meine Liebe zu dir packt alles ein,<br />was nur uns gehört,<br />und begleitet mich unendlich.<br />Und irgendwann kommt die Sonne.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Unendlich</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich trage dich in mir,<br />Stille und Dankbarkeit<br />tragen meine Geschichte<br />UNENDLICH.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Unser Leben</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Kaffee schmeckt wieder bittersüß.<br />Der Himmel zaubert Kunstwerke grau in grau.<br />Alle Erinnerung hält ein Lachen bereit,<br />ich weiß, du bist nicht weit,<br />bist nur voraus.<br />Das macht unser Leben aus.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Unvergessen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Behutsam, langsam schlägt dieser Takt.<br />Es winkt mir zu, wenns auch so fern.<br />Nie mehr vergessen diesen Klang,<br />unendliche Sehnsucht,<br />hab dich so gern.<br />Zwei Herzen auf Zeit nur<br />voneinander getrennt.<br />Die Liebe sie bleibt,<br />für immer brennt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Verbundenheit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Verbundenheit und Liebe,<br />war unsere Stütze und unser Halt.<br />Du schwebst jetzt vielleicht in Lila,<br />durch einen phantastischen Wald.<br />Blüten und Blumen dort,<br />bis in den Himmel hoch.<br />Ich wünsch dir zu Schweben,<br />im Gleichgewicht noch.<br />Die Farben unserer Tage,<br />sind Begleiter von dir,<br />sie malen am Himmel<br />tausend Bilder von mir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Viel Neues</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Es geht was zu Ende,<br />und so viel bleibt.<br />Es wartet viel Neues,<br />das Geschichte schreibt.<br />Es wird nie vorbei sein,<br />die Reise mit dir.<br />Alles, was bleibt, sind Bilder und<br />WIR.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Windumarmung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Wind umarmt mich ganz sanft,<br />ich glaube, das bist du.<br />Der Himmel trocknet meine Tränen,<br />ich glaube, du schaust zu.<br />Der Regen legt nun Spuren auf meinem Plan,<br />und ich weiß, du bist nur voran.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Zuhören</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich höre zu,<br />auch wenn du nicht sprichst.<br />Ich bin da,<br />auch wenn deine Augen mich nicht mehr suchen.<br />Ich betrete Räume,<br />und du bist immer bei mir.<br />Irgendwann wird uns Friede in eine Welt verzaubern,<br />die wir heute noch nicht wahrnehmen.<br />Es wird schön, so schön!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="hoffnung">
+              <h3 class="poem__title">Zuversicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Kleine Erfolge mit Dankbarkeit angenommen.<br />Große Hoffnung, Wünsche<br />und Enttäuschung ineinander verschwommen.<br />Immer wieder eine Lücke im großen Meer,<br />trotz allem die Kraft der Liebe so sehr.<br />Die Macht der Zuversicht, die stetig sprießt,<br />leben in Liebe, der Fluss er fließt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Zirkus</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Schauen, staunen, applaudieren,<br />niemals will ich sie verlieren,<br />diese wundervolle Zeit,<br />voller Lachen und Heiterkeit.<br />Jeden Tag ein Zirkus wär’,<br />könnte ich träumen<br />mehr und mehr.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Gartln, pflücken, schenken</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Gartln, pflücken, schenken,<br />das ist dein Geschick.<br />Heut jedoch sind wir am Geben,<br />wünschen ganz viel Glück.</p>
+                <p>Bringen Zeit, Geduld und Lachen,<br />wollen mit dir verweilen.<br />Einen schönen Tag verbringen,<br />mit dir Freude teilen.</p>
+                <p>Alles Liebe, und noch viele gemeinsame Stunden,<br />das wünschen wir zum Runden.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Liebe Goti</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ist es wirklich wahr, wirst du heute 30 Jahr?<br />Hätte gern von dir gewusst, wozu hast du heute Lust?<br />Willst du tanzen, singen lachen,<br />oder sollen Raketen krachen?<br />Ganz egal was heut passiert,<br />jeder dir jetzt gratuliert.<br />Wir wünschen dir das Allerbeste,<br />zum runden 30er Feste.<br />Und von mir zum guten Schluss,<br />bekommst einen süßen Gotlkind-Kuss!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Lieber Opa</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Schau nur her,<br />der Hampelmann ist gar nicht schwer! (Hampelmann machen)<br />Der Purzelbaum ist nicht so leicht, (mit Händen den Purzelbaum anzeigen)<br />doch du hast 80 Jahre erreicht.<br />Der Hampelmann für dich zu schwer, (Hampelmann machen)<br />der Purzelbaum der geht nicht mehr, (mit Händen den Purzelbaum anzeigen)<br />doch du kannst lauschen, erzählen und lachen,<br />und ganz, ganz viele andere Sachen.<br />Wir wünschen dir zum Jubelfest,<br />noch ganz, ganz oft ein Lachen,<br />wenn Lisa und ich<br />für dich lieber Opa<br />den Hampelmann so machen! (Hampelmann machen)</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Märchengebet</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Heute sehe ich viele Zwerge,<br />morgen steig ich auf die Berge,<br />Rosen schmücken mir mein Bett,<br />alle Träume sind so nett.<br />Lieber Gott kennst du sie auch,<br />die Geschichten, diesen Brauch,<br />diese Märchen wundervoll,<br />ich find sie phantastisch<br />und einfach<br />toll.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Sag lieber Gott</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Sag, lieber Gott,<br />sag weißt du noch,<br />wie gern ich Fernsehen schaue?<br />Sag, lieber Gott, sag weißt du auch,<br />wie gern ich Sandburgen baue?<br />Sag, weißt du auch, wie gern ich singe,<br />lache, hüpfe, springe?</p>
+                <p>Was machst denn du den ganzen Tag?<br />Ich hoff du hörst mich, wenn ich frag!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Wo schaltet man die Sonne ein</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wo schaltet man die Sonne ein?<br />Wo zündet man die Sterne an?<br />Sag, ist der Mond ein Strahlemann?<br />Nein, nein, der liebe Gott allein,<br />lässt diese Lichter scheinen.<br />Wir brauchen nur den Kopf zu drehen,<br />und weit hinauf zum Himmel sehen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Eine Mundharmonika dazu noch eine Krone</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Geburtstagswünsche<br />fürs Geburtstagskind</p>
+                <p>Eine Mundharmonika dazu noch eine Krone,<br />ganz viele Freunde, eine Torte dazu,<br />das wäre auch nicht ohne.<br />Wir wünschen Musik, Tanz und Glück,<br />und denk auch manchmal an uns zurück.<br />Ja, obendrein viel Sonnenschein,<br />du sollst unsere Geburtstagskönigin sein!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Geburtstagswünsche Leben</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Geburtstagswünsche</p>
+                <p>Ich wünsch dir ganz Vieles, … Alles ist schon da.<br />Du brauchst es nur greifen, es ist dir so nah.<br />Das Strahlen deiner Augen, die Wärme der Sonne,<br />das Lachen im Herzen, deine Freude, deine Wonne.<br />Die Buntheit des Lebens, greif zu – ohne Scheu.<br />Die Farben der Erde malst du dir jetzt neu.<br />Die Liebe, die dich einhüllt – und trägt so weit,<br />das Abenteuer „Leben“ steht für dich nun bereit.<br />… und die Botschaft zu greifen, was dir heut so nah<br />wünsch ich von ganzem Herzen,<br />denn Alles ist schon da!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Lieber Papa</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wir wissen, des mit den Sternzeichen ist nicht dein Ding!<br />Und trotzdem bist du für uns der King!<br />Du bist der Löwe, der niemals brüllt,<br />deine Nerven scheinen in Watte gehüllt.<br />Die Krallen fährst du niemals aus,<br />außer es wird gefährlich in unserem Haus.<br />Wir drei Simbas lieben dich so sehr,<br />und geben dich niemals wieder her.<br />Laktibu, Kakibu und Makibu,<br />gehören immer dazu!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Sterne schauen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Schaut, schaut, ein Stern ganz oben am Himmel!<br />Schaut, schaut, er leuchtet so hell und klar!<br />Schaut, schaut, er strahlt auf unsere Straßen,<br />die Laternen leuchten so wunderbar.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Wir trinken gesund</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>ohne Zucker im Mund!<br />Wir essen ganz bunt<br />auch das ist gesund!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Bin nicht Picasso</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich bin nicht Picasso,<br />und auch nicht Miró.<br />Auch nicht Jackson Pollock,<br />wir malten nur so.</p>
+                <p>Wir malten mit Freunden,<br />Musik und viel Lachen.<br />Wir malten die Welt,<br />und andere Sachen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Mozart und Miró</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Komponieren wie Mozart,<br />malen wie Miró,<br />das wäre sehr schön,<br />das wünsch ich mir so.<br />Märchen erfinden, wie Grimm<br />und Frau Wolle,<br />es wäre genial,<br />super tolle!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Rot ist meine Lieblingsfarbe</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Meine Lieblingsfarbe</p>
+                <p>Rot ist meine Lieblingsfarbe,<br />Rot das find ich schön.<br />Rot sind meine Träume, sie sollten nie vergehen.<br />Rot, so ist mein ganzer Tag,<br />Essen, Kleidung und die Haut.<br />Rot ist meine Lieblingsfarbe,<br />sie ist mir so vertraut.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Ein Märchen, ein Schatz, eine Truhe</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>jetzt bitte ich einfach um Ruhe.<br />Ein Märchensymbol für jede Geschicht,<br />verzaubert mich ständig<br />und brennt wie ein Licht.<br />Ein Licht für die Seele,<br />Freude und Mut,<br />ein Märchen so schön,<br />heut geht es<br />mir gut.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Ein Märchenspiel steht heut bereit</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Verzaubert alle Gäste heut.<br />Es führt euch in ein Märchenland,<br />bringt Märchenduft aus Kinderhand.<br />Ein Röschen ohne Dornen,<br />viele Frösche ohne Kronen,<br />und ganz zum Schluss nicht zu vergessen,<br />ein Märchenkoch sorgt für das Essen.<br />Wir wünschen allen Gästen heut,<br />eine wunderbare Märchenzeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Märchen lieb ich über alles</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>möchte täglich neue hören.<br />Märchen lieb ich über alles,<br />lass mich ungern dabei stören.<br />Märchen hin und Märchen her,<br />mit Musik<br />lieb ich sie noch mehr!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Alle Tage</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Liebe Mama</p>
+                <p>Mama möchte gern alle Tage,<br />mit dir in den Zirkus gehen.<br />Clowns und Tiere, Akrobaten,<br />werden die Manege drehen.<br />Will den Zauber mit dir teilen,<br />Seifenblasen tanzen sehen.<br />Ja der Zirkus schenkt uns Flügel,<br />und sie mögen nie vergehen.<br />Diese Bilder, diese Lieder,<br />diese Lichter halten ein.<br />Als Geschenk für meine Mama,<br />soll der Zirkus heute sein.<br />Danke für Alles,<br />und nun zum Schluss,<br />einen zuckersüßen Kuss.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Ich weiß schon, was ich heute will</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Mal zappeln, mal lachen, und mal sitz ich still!</p>
+                <p>Doch weiß ich leider nicht,<br />was „ ………“ will,<br />was „ ………..“ will,<br />ich werde sie einfach fragen!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Liebe Mama – Modenschau</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Liebe Mama, lieber Papa!<br />Viel Mode<br />habt ihr heute gesehen,<br />da will Mama sicher gleich shoppen gehen.</p>
+                <p>Der Papa,<br />ist zufrieden mit einer Krawatt’,<br />doch Mama hat Mode noch lange nicht satt.</p>
+                <p>Drum gibt’s für sie zum guten Schluss<br />ein Täschchen für Neues,<br />und für Paps einen Kuss!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Liebe Mama – Zirkus</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Liebe Mama!</p>
+                <p>Mama möcht gern alle Tage<br />mit dir in den Zirkus gehen.<br />Clowns und Tiere, Akrobaten<br />werden die Manege drehen.<br />Will den Zauber mit dir teilen,<br />Seifenblasen tanzen sehen.</p>
+                <p>Ja der Zirkus schenkt uns Flügel,<br />und sie mögen nie vergehen.<br />Diese Bilder, diese Lieder,<br />diese Lichter halten ein.<br />Als Geschenk für meine Mama<br />soll der Zirkus heute sein.<br />Danke für Alles,<br />jetzt zum Schluss<br />mit einem zuckersüßen<br />Kuss.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Mama, ich will dir was schenken</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Zum Muttertag</p>
+                <p>Mama ich will dir was schenken,<br />was es zu kaufen nicht gibt.<br />Ich schenk dir ein Bild,<br />hab’s selber gemalt.<br />Mama ich hab dich so lieb.</p>
+                <p>Mama ich will dir was schenken,<br />was du bestimmt noch nicht hast.<br />Ein Bild, eine Rose,<br />einen Kuss zuckersüß,<br />damit du mich niemals vergisst!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Muttertag 2018</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Muttertag<br />Ein Haubenkoch,<br />das bin ich nicht,<br />doch lieb ich es zu naschen.<br />Ja heut möchte ich am Muttertag<br />dich köstlich überraschen.<br />Mit bunten Nudeln zur Feier heut,<br />ich hab’ dich lieb in<br />Ewigkeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">So wertvoll wie eine Rose</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>sind Kinder unserer Zeit.<br />So zerbrechlich wie Rosenblätter,<br />so liebevoll und bereit.<br />Bereit zum Wachsen und Reifen,<br />zum Gehen und zum Schauen,<br />wo auf der Erde Plätze,<br />um Rosenschlösser zu bauen.<br />Wir wollen die Kinder führen,<br />ganz sachte und so fein.<br />Denn Kinder unserer Erde<br />wollen selbständige Rosen sein.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Bälle können groß sein</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>bunt oder auch klein,<br />Bälle können weich sein,<br />hart und gar nicht fein,<br />doch ein Ball auf jeden Fall,<br />der rollt mit und ist ein Knall.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Der Ball</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Bälle können bunt sein,<br />groß oder auch klein.<br />Bälle können weich sein,<br />hart und gar nicht fein.<br />Bälle können springen,<br />hüpfen oder klingen.<br />Bälle können rollen,<br />hopsen oder tollen.<br />So ein Ball in jedem Fall,<br />ist ein Hit ja überall!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Im Nudelland</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Im Nudelland der Nudelkinder<br />gibt’s Nudeln dick und dünn und bunt.<br />Im Nudelland der Nudelkinder<br />sind alle kerngesund.<br />Denn alle essen Tag für Tag,<br />die Nudeln, weil sie jeder mag!<br />Doch heut ist unser schönster Tag,<br />denn es gibt Nudeln dick und bunt.<br />Und wer gern bunte Nudeln mag,<br />der kommt zu uns an diesem Tag!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Im Nudelland der Nudelkinder</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>gibt’s Nudeln dick und dünn und bunt.</p>
+                <p>Im Nudelland der Nudelkinder<br />sind alle kerngesund.</p>
+                <p>Denn alle essen Tag für Tag,<br />die Nudeln, weil sie jeder mag.</p>
+                <p>Ja heut ist unser schönster Tag,<br />denn es gibt Nudeln, dick und bunt,<br />und jeder der gern Nudeln mag<br />der kommt zu uns an diesem Tag.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Laura mein Maskottchen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Laura<br />mein Maskottchen,<br />du bist mein bestes Stück,<br />und bringst mir alle Tage,<br />ganz bestimmt viel Glück!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Luftballon</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Luftballon, Luftballon,<br />he du leichtes Ding,<br />fang mich doch, fang mich doch,<br />ei, wo bist du hin?</p>
+                <p>Sehe dich nicht, spür dich nicht,<br />möchte dich gern entdecken,<br />komm heraus, komm heraus,<br />darfst mich heut nicht necken.</p>
+                <p>Ei, wie schön, ich kann dich sehn,<br />sollst mit mir ….. spazieren(tanzen) gehen!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Meine Handpuppe</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Meine Puppe ist heut hier,<br />ja sie ist ein Teil von mir.<br />Meine Puppe sie kann sprechen,<br />schweigen und auch böse sein.<br />Sie kann lachen und auch weinen,<br />meine Puppe ist so fein.<br />Sie spricht nur, wenn ich es will,<br />möchte ich schweigen - ist sie still.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Rhythmus in mir</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich hör es, ich hör es, das Klopfen ist so laut.<br />Ich spür es, ich spür es, es kribbelt auf meiner Haut.<br />Ich sing es, ich sing es, das Lied macht mich so froh.<br />Ich hoffe, ich hoffe, es geht dir ebenso.</p>
+                <p>Laut und leise,<br />hoch und tief.<br />Schnell und langsam,<br />grad und schief.<br />Kann mein Auge<br />gar nicht sehn,<br />alle Töne klingen schön.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Steine möchte ich viele sammeln</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Steine</p>
+                <p>Steine möchte ich viele sammeln,<br />doch am liebsten nur mit dir.<br />Diesen Stein möchte ich dir schenken,<br />er kommt von Herzen und ist von mir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Bewegungsreim Hase</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Bewegungs- Rhythmus-Reim</p>
+                <p>Mein Bommelschwanz so bunt und groß,<br />was ist bloß mit dem Schwänzchen los?<br />Es zippelt und zappelt,<br />es wiggelt und wackelt.<br />Jetzt sitz ich still,<br />und mach was<br />ich<br />will.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Eier für Fritz</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Milch für die Anna.<br />Den Apfel für Max und<br />Brot für die Hanna.<br />Und wer noch nicht satt ist,<br />beginnt jetzt zu essen.<br />Aber bitte nicht schmatzen,<br />oder hast du’s vergessen?</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Mein Bommel</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Mein Bommelschwänzchen<br />so bunt und groß,<br />was ist bloß mit dem Schwänzchen los?<br />Es zippelt und zappelt,<br />es wiggelt und wackelt,<br />jetzt ist es still<br />und tut was ich will!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Meine Henne sitzt im Nest</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Osterzeit</p>
+                <p>Meine Henne sitzt im Nest,<br />sie brütet sanft, sie brütet fest!<br />Sie brütet jetzt zur Osterzeit<br />ein weißes Ei – es ist so weit.<br />Schau her, die Henne läuft davon,<br />ein schönes Ei, ich hab es schon!</p>
+                <p>Die Henne sitzt auf ihrem Nest,<br />sie brütet fleißig, brütet fest.<br />Sie hat versteckt im Federbett,<br />ein schönes Ei ganz weiß und nett.<br />Und dann zur schönen Osterzeit<br />ist es endlich dann so weit.<br />Die Henne gluckt, verlässt das Nest<br />und siehe da, ein Ei zum Fest.<br />Ganz bunt – wo ist das weiße Ei?<br />Da ruft der Hahn – da sind noch drei.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Ein Kind ist wie ein Sonnenstrahl</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>gibt Licht und Wärme auf der Welt.<br />Ein Kind ist wie ein Sonnenball,<br />der uns täglich bewegt und lebendig hält.<br />Drum stets behüte diesen Schatz,<br />er braucht auf unserer Erde<br />den allerschönsten Platz.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Geschenk</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Du schenkst der Kuh das Muhen,<br />das Grunzen für das Schwein,<br />die Hunde lässt du bellen,<br />und Kinder fröhlich sein.<br />Die Katze lässt du schleifen,<br />die Hühner Eier legen,<br />und alle Kinder lässt du hier,<br />in Glück und Frieden leben.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Guten Tag</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Guten Tag, ich bin ein Bär,<br />dies zu sehen ist gar nicht schwer.<br />Hab’ ein dickes Bärenfell,<br />komm und fang mich,<br />komm ganz schnell.<br />Guten Tag, ich bin ein Bär,<br />dies zu sehen ist nicht schwer.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Pinguin</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ein Pinguin schaut auf die Uhr!</p>
+                <p>Ein Pinguin schaut auf die Uhr.<br />„Sag, wie spät ist es nur?“<br />„Jetzt ist es gleich Punkt 10,<br />komm wir wollen essen gehen!“</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Schneckenkinder aufgepasst</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Eine Schnecke, schau wie schön!<br />Ich möchte mit ihr spazieren gehen,<br />doch leider bitte sehr,<br />dieser Schnecke ist ihr Haus zu schwer.<br />Sie bleibt hier stehen und gibt gut acht,<br />wie jeder eine Schnecke macht.<br />Viel Spaß beim Formen und viele Lacher,<br />die Schneckengruppe ist ein Kracher!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Lieber Papa</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Steine möcht ich viele sammeln,<br />doch am liebsten nur mit dir.<br />Diesen Stein will ich dir schenken,<br />er kommt von Herzen, er ist von mir.<br />Trag den Stein, er soll dir sagen,<br />ich werde dich stets im<br />Herzen tragen.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Lieber Papa – Vatertag 2016</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Lieber Papa!</p>
+                <p>Ich schenk dir was Kleines,<br />es ist gar nicht viel!<br />Ich denk immer an dich,<br />das ist alles was ich will.<br />Ich schenk dir was Kleines,<br />und hoffe es gefällt.<br />Es kommt vom kleinen<br />Liebling<br />auf dieser großen Welt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Papa, ich will dir was schenken</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Für Papa<br />Papa ich will dir was schenken,<br />was es zu kaufen nicht gibt.<br />Ich malte dir den schönen Stein,<br />mit Farben bunt, mit Farben fein.</p>
+                <p>Papa ich will dir was schenken,<br />was du bestimmt noch nicht hast.<br />Ein Stein wie im Märchen, denke immer zurück,<br />er macht dich ganz mutig und bringt dir viel Glück.</p>
+                <p>Der Stein ist von mir, von deinem kleinen Schatz,<br />ich hoffe du findest für ihn einen Platz!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Advent</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Advent ist da, und noch kein Schnee.<br />Ob ich heuer wohl das Christkind seh?<br />Advent ist da, der Duft ganz süß,<br />wenn ich’s seh, das Christkind,<br />von meinem Freund ich dann grüß.<br />Advent ist da, jetzt geh ich vors Haus,<br />vielleicht schaut das Christkind<br />vom Himmel raus.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Der Herzensengel</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich bin der Herzensengel,<br />das weiß doch jedes Kind!<br />Ich freu mich ganz von Herzen,<br />wenn Kinder glücklich sind.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Eine kleine Kerze</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Eine kleine Kerze, zünd ich dir heut an.<br />Schau wie hell sie leuchtet,<br />freu mich sehr daran.</p>
+                <p>Eine kleine Kerze trag ich heut nach Haus,<br />wenn sie genug geleuchtet hat,<br />dann blase ich sie aus.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Laute Töne kann ich hören</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>glaub, es sind die Schuh von dir.<br />Und ganz leise klingen Glöckchen,<br />stehst du gar vor unsrer Tür?<br />Sachtes Klopfen, Nüsse klappern,<br />glaub, der Nikolaus ist da,<br />Mandarinenduft im Zimmer,<br />aufgeregte Kinderschar.<br />Ja er kommt, jetzt alle still,<br />weil Nikolaus was sagen will.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Nikolaus Rap</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Nikolaus ich hör es klumpern,<br />Nikolaus ich hör es pumpern,<br />stehst du schon vor meiner Tür?<br />Sag, war ich auch brav genug,<br />dass du heute kommst zu mir?</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Weihnachten suchen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wann kommt Weihnachten?</p>
+                <p>Wenn Weihnachten nur zu Weihnachten ist,<br />dann kommt es mir zu wenig vor.<br />Wenn Schenken nur zu Weihnacht passiert,<br />dann kommt so Vieles zu spät.<br />Wenn Liebe nur zu Weihnacht erfüllt,<br />dann kann keine Seele heilen.<br />Schenken und Lieben<br />übers Jahr hin verteilt,<br />so mancher Schmerz<br />auch wieder verheilt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Weihnachten wie im Märchen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Einmal die Weihnacht wie im Märchen spüren,<br />mit Zwergen und Feen den Himmel berühren.<br />Den König zum Tanz auf den Sternen verführen.<br />Das Dunkel der Nacht in der Tiefe versenken,<br />und Licht und Liebe nur noch verschenken.<br />Einmal die Weihnacht wie im Märchen spüren,<br />der Zauber des Schenkens<br />möge jeden berühren.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="kindergedichte">
+              <h3 class="poem__title">Wer hört das leise Klingen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>wer kann die Schritte hören?<br />Wer hört das dumpfe Schlagen,<br />es wird wohl keiner wagen,<br />und unsere Ruhe stören.</p>
+                <p>Es klingen Glocken leise,<br />es tönen Trommeln so laut,<br />und beides spür ich wieder<br />ganz dicht an meiner Haut.</p>
+              </div>
             </article>
 
           </div>
@@ -183,12 +1555,9 @@
         <div class="container">
           <div class="page-quote__inner reveal">
             <blockquote>
-              „Zwischen den Wörtern<br />
-              wächst das Eigentliche.<br />
-              Man muss nur still genug sein,<br />
-              um es zu hören."
+              Die Magie des Augenblicks möge den Weg von Anfang und Ende begleiten
             </blockquote>
-            <cite>Silvia Föger — aus Feldnotizen</cite>
+            <cite>Silvia Föger</cite>
           </div>
         </div>
       </section>
@@ -200,15 +1569,14 @@
         <div class="footer__inner">
           <div class="footer__brand">
             <img class="footer__logo" src="assets/img/logo.png" alt="Silvia Föger Spirale Logo" />
-            <p class="footer__tagline">Handgemachte Keramik, Poesie<br />und Zeichnungen aus Tirol.</p>
+            <p class="footer__tagline">Handgemachte Keramik, Poesie<br />und Gestalttherapeutische Projekte aus Tirol.</p>
           </div>
           <div class="footer__cols">
             <div class="footer__col">
               <h4>Atelier</h4>
-              <p>Atelierbesuche nach Vereinbarung.</p>
               <p>Innsbruck, Tirol, Österreich</p>
             </div>
-<div class="footer__col">
+            <div class="footer__col">
               <h4>Folgen</h4>
               <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
               <a href="https://pinterest.com" target="_blank" rel="noreferrer noopener">Pinterest</a>
@@ -221,6 +1589,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=1.0.0"></script>
   </body>
 </html>
