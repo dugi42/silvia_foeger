@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css?v=1.0.0" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1.0" />
   </head>
   <body>
 
@@ -95,6 +95,7 @@
             <button class="poem-filter__btn is-active" type="button" role="tab" aria-selected="true" data-band="sehnsucht">Band I · Sehnsucht</button>
             <button class="poem-filter__btn" type="button" role="tab" aria-selected="false" data-band="hoffnung">Band II · Hoffnung</button>
             <button class="poem-filter__btn" type="button" role="tab" aria-selected="false" data-band="kindergedichte">Band III · Kindergedichte</button>
+            <button class="poem-filter__btn" type="button" role="tab" aria-selected="false" data-band="irgendwann">Band IV · Irgendwann</button>
           </div>
         </nav>
 
@@ -103,7 +104,8 @@
           <div class="poem-tools reveal">
             <div class="poem-search">
               <label class="sr-only" for="poem-search-input">Gedichte durchsuchen</label>
-              <input id="poem-search-input" class="poem-search__input" type="search" placeholder="Titel oder Zeile suchen …" autocomplete="off" />
+              <input id="poem-search-input" class="poem-search__input" type="search" placeholder="Titel oder Zeile suchen …" autocomplete="off" aria-controls="poem-suggestions" />
+              <ul id="poem-suggestions" class="poem-search__suggestions" role="listbox" aria-label="Titelvorschläge" hidden></ul>
             </div>
             <p class="poem-archive__count" aria-live="polite"></p>
           </div>
@@ -348,14 +350,6 @@
               <div class="poem__divider" aria-hidden="true"></div>
               <div class="poem__body">
                 <p>Der Unendlichkeit noch nicht begegnet,<br />viel Liebe dafür still getragen.<br />Die Hoffnung tausend Augenblicke gesucht,<br />und tausend Tränen im Dunkel versteckt.<br />Die Endlichkeit nicht haben wollen,<br />doch sie ein Teil vom Ganzen ist.<br />Die Liebe ein Leben lang festhalten,<br />unendlich dieses Gefühl.</p>
-              </div>
-            </article>
-
-            <article class="poem-leaf" data-band="sehnsucht">
-              <h3 class="poem__title">Ein Augenblick der Seelenruhe</h3>
-              <div class="poem__divider" aria-hidden="true"></div>
-              <div class="poem__body">
-                <p>Ist besser als alles, was du sonst erstreben magst.<br />(aus Persien)</p>
               </div>
             </article>
 
@@ -1547,6 +1541,174 @@
               </div>
             </article>
 
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Alles fließt</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Kleine Erfolge mit Dankbarkeit angenommen,<br />Wünsche und Enttäuschung wieder und wieder gekommen.<br />Die Macht der Hoffnung in mir stetig sprießt,<br />lebe, lebe, lebe, der Fluss er fließt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Entwicklung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das gebrochene Land nimmt wieder Sonne auf.<br />Herzen tragen Samen auf die Erde.<br />Der Regen spannt ein fruchtbares Band über all die Wunden.<br />Irgendwann mögen zauberhafte Träume den neuen Weg beschenken.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Friede</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Zeit möge kommen,<br />wo zauberhafte Blumen blühen,<br />wo der Regen singt, und Tropfen glühen,<br />wo Feuer fängt das verletzte Sein,<br />dann möge in mir einfach Friede sein.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Gedankenwelt</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich liebe den Regen,<br />das Lauschen mit dir.<br />Die zuckersüßen Gedanken,<br />die Bilder in mir.<br />Der Sturm braust neu,<br />das Sein mit dir,<br />weiße Wolken am Himmel,<br />und immer WIR.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Gleichgewicht</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Unglaubliche brachte uns ins Gleichgewicht.<br />Die Andersartigkeit machte unser Spiel so spannend.<br />Alle Stürme schenkten uns Wurzeln.<br />Jeder Schmerz fühlte sich halb an,<br />weil wir eins waren, für immer und ewig.<br />Die Stille war unser Moment,<br />der alles innehatte.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Irgendwann</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich lese unsere Geschichte wieder neu.<br />So viele Fragen und keine Antwort.<br />Ich male unsere Bilder in allen Farben.<br />Ich möchte dieses Märchen singen,<br />der Dirigent fehlt.<br />Ich werde die Melodie im Herzen tragen,<br />bewahren bis irgendwann.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Leben</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>So viel Leben,<br />manchmal zu viel.<br />So viel Lachen,<br />so wunderbar.<br />So viel Traurigkeit,<br />doch anzunehmen.<br />So viel Schönes,<br />was im Herzen immer bleibt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Liebe pur</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich liebe dich bis zum Himmel und wieder retour.<br />Weinen und Lachen pur,<br />wenn du mich hältst, in einsamer Nacht,<br />und deine Seele über mir wacht.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Manchmal</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Manchmal<br />bin ich zurück,<br />ein vager Blick.<br />Manchmal such ich<br />nach dir,<br />im Jetzt und im Hier.<br />Manchmal weiß ich,<br />du bist da,<br />still und wunderbar.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Mein Himmel</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Du warst mein Himmel,<br />du warst mein Stern,<br />du fülltest die Tage,<br />hatte alles so gern.<br />Wollt nie ohne dich,<br />dieses Tal erleben.<br />Der Himmel klopfte an,<br />dich abzugeben.<br />So schwer dieser Sturm,<br />und kaum zu ertragen.<br />Du bist ganz oben,<br />hab so viele Fragen.<br />Du bleibst mein Himmel,<br />du bleibst mein Stern,<br />auch wenn unsere Zeit so weit so fern.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Mein Unikat</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wertvoll<br />dein Lachen,<br />dein Rhythmus,<br />dein Blick,<br />deine Begegnung mit dir.<br />Du bist und bleibst<br />mein Unikat.<br />Gefunden, getragen, geliebt,<br />als wertvollstes Element<br />dieser Welt.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Neues Sein</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Ich möchte nicht verstehen,<br />warum du gegangen.<br />Ich möchte nicht begreifen,<br />weshalb gerade wir.<br />Ich will nur wissen,<br />wo es wartet,<br />das neue Sein<br />mit dir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Noch einmal</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Würd so gern nochmal mit dir lachen.<br />Möchte dich nochmal halten,<br />eine Reise machen.<br />Alle Wünsche nur noch im Herzen verwaltet.<br />Die Zeit hat alles eingefroren,<br />jede Erinnerung geht niemals verloren.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Suche</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wo bist du jetzt,<br />ich such deinen Atem.<br />Wie schläfst du ein,<br />sind Wolken dein Sein.<br />Wann schaust du herab,<br />auf all die leeren Tage?<br />Kannst du sie hören, meine Frage?<br />Gib bitte ein Zeichen, ein leises Hier!<br />Ich warte darauf … auf immer Wir!</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Tränen</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Die Tränen werden weniger,<br />die Sehnsucht bleibt,<br />meine Liebe zu dir<br />steigt in eine Dimension<br />unglaublicher Weite.<br />Die Hoffnung auf ein Wiedersehen<br />lebt weiter.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Umarmung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Der Wind umarmt mich sanft,<br />ich glaube, das bist du.<br />Der Himmel trocknet meine Tränen,<br />ich glaube, du schaust zu.<br />Der Regen legt neue Spuren<br />in meinen Weg.<br />Und ich weiß, irgendwann<br />komm ich bei dir an.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Unglaublich</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Das Unglaubliche brachte uns ins Gleichgewicht.<br />Die Andersartigkeit machte unser Spiel so spannend.<br />Alle Stürme schenkten uns Wurzeln.<br />Jeder Schmerz fühlte sich halb an,<br />weil wir eins waren, für immer und ewig.<br />Die Stille war unser Moment,<br />der alles innehatte.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Verbindung</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Lass dich nie alleine,<br />so oft versprochen,<br />bin immer bei dir,<br />ward nie gebrochen.<br />Auch wenn unsere Wege<br />unglaublich weit,<br />die Verbindung bleibt ewig,<br />auf alle Zeit.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Wind und Sonne</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wenn der Wind meine Tränen fortträgt,<br />die Sonne die Sehnsucht trocknet,<br />dann versuche ich in Stille dankbar zu sein.<br />Und wenn ein Sturm mir den Regen schickt,<br />weiß ich, du schüttest deine Liebe über mich.<br />Und wenn Wolken meine Augen zudecken,<br />wünsch ich, du bist ganz nah bei mir.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Wir</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Wir alle sind nur zu Besuch auf dieser Erde,<br />um zu lernen und Geschichten zu schreiben.<br />Wenn wir diesen Zustand verlassen,<br />sind wir dort,<br />wo niemand weiß,<br />wie schön es sein wird.</p>
+              </div>
+            </article>
+
+            <article class="poem-leaf" data-band="irgendwann">
+              <h3 class="poem__title">Wunschpfad</h3>
+              <div class="poem__divider" aria-hidden="true"></div>
+              <div class="poem__body">
+                <p>Mein Wunschpfad so alleine zu gehen, erfordert Mut.<br />Die Richtung möge passend sein,<br />viele Schritte tun gut.<br />Jedes Hindernis ein neues Ziel,<br />Freude und Friede,<br />das, was ich will.</p>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
@@ -1578,8 +1740,7 @@
             </div>
             <div class="footer__col">
               <h4>Folgen</h4>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a>
-              <a href="https://pinterest.com" target="_blank" rel="noreferrer noopener">Pinterest</a>
+              <a href="https://www.instagram.com/silvia_foeger_keramik?igsh=aW5pYjJmMjdiNjA=" target="_blank" rel="noreferrer noopener">Instagram</a>
             </div>
           </div>
         </div>
@@ -1589,6 +1750,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js?v=1.0.0"></script>
+    <script src="assets/js/main.js?v=1.1.0"></script>
   </body>
 </html>

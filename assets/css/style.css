@@ -163,6 +163,7 @@ a {
 .nav-toggle__bar::before,
 .nav-toggle__bar::after {
   content: "";
+  position: relative;
   display: block;
   width: 22px;
   height: 1.5px;
@@ -1126,6 +1127,7 @@ a {
 }
 
 .poem-search {
+  position: relative;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -1148,6 +1150,41 @@ a {
 .poem-search__input:focus {
   outline: none;
   border-color: var(--gold);
+}
+
+.poem-search__suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: var(--warm-white);
+  border: 1px solid rgba(30, 27, 24, 0.12);
+  border-top: 0;
+  box-shadow: 0 14px 28px rgba(30, 27, 24, 0.1);
+}
+
+.poem-search__suggestion {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 0.5rem 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.poem-search__suggestion:hover,
+.poem-search__suggestion:focus {
+  background: rgba(201, 164, 85, 0.12);
+  color: var(--ink);
+  outline: none;
 }
 
 .poem-archive__count {

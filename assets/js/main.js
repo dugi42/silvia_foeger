@@ -82,11 +82,98 @@ document.addEventListener("DOMContentLoaded", () => {
       emptyEl.hidden = shown > 0;
     };
 
+    // Title suggestions while typing (from the first letter on)
+    const suggestions = archive.querySelector(".poem-search__suggestions");
+    const titleOf = (card) =>
+      card.querySelector(".poem__title").textContent.trim();
+
+    const hideSuggestions = () => {
+      if (!suggestions) return;
+      suggestions.hidden = true;
+      suggestions.innerHTML = "";
+    };
+
+    const showSuggestions = () => {
+      if (!suggestions) return;
+      const query = input.value.trim().toLowerCase();
+      if (!query) {
+        hideSuggestions();
+        return;
+      }
+
+      const seen = new Set();
+      const matches = [];
+      cards.forEach((card) => {
+        if (card.dataset.band !== band) return;
+        const title = titleOf(card);
+        const key = title.toLowerCase();
+        if (seen.has(key) || !key.includes(query)) return;
+        seen.add(key);
+        matches.push(title);
+      });
+
+      if (!matches.length) {
+        hideSuggestions();
+        return;
+      }
+
+      suggestions.innerHTML = "";
+      matches.slice(0, 6).forEach((title) => {
+        const item = document.createElement("li");
+        item.setAttribute("role", "option");
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "poem-search__suggestion";
+        btn.textContent = title;
+        btn.addEventListener("click", () => {
+          input.value = title;
+          apply();
+          hideSuggestions();
+          input.focus();
+        });
+        item.appendChild(btn);
+        suggestions.appendChild(item);
+      });
+      suggestions.hidden = false;
+    };
+
+    if (suggestions) {
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          hideSuggestions();
+        } else if (event.key === "ArrowDown" && !suggestions.hidden) {
+          event.preventDefault();
+          suggestions.querySelector("button")?.focus();
+        }
+      });
+
+      suggestions.addEventListener("keydown", (event) => {
+        const items = Array.from(suggestions.querySelectorAll("button"));
+        const index = items.indexOf(document.activeElement);
+        if (event.key === "ArrowDown" && index < items.length - 1) {
+          event.preventDefault();
+          items[index + 1].focus();
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          if (index > 0) items[index - 1].focus();
+          else input.focus();
+        } else if (event.key === "Escape") {
+          hideSuggestions();
+          input.focus();
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".poem-search")) hideSuggestions();
+      });
+    }
+
     const anchor = archive.querySelector(".poem-nav__anchor");
 
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
         band = btn.dataset.band;
+        hideSuggestions();
         buttons.forEach((other) => {
           const isActive = other === btn;
           other.classList.toggle("is-active", isActive);
@@ -105,7 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    input.addEventListener("input", apply);
+    input.addEventListener("input", () => {
+      apply();
+      showSuggestions();
+    });
     apply();
   }
 
