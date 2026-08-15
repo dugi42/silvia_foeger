@@ -1,0 +1,22 @@
+[project]
+name = "silvia-foeger"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "einops>=0.8.2",
+    "huggingface-hub>=1.4.1",
+    "imageio>=2.34.0",
+    "omegaconf>=2.3.0",
+    "onnxruntime>=1.24.1",
+    "rembg>=2.0.69",
+    "scikit-image>=0.23.0",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+    "transformers>=4.35.0",
+    "trimesh>=4.11.1",
+]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
