@@ -1,0 +1,50 @@
+name: Publish via FTP
+
+# Deployment schema copied from hct.github.io: python/ftp_upload.py mirrors
+# the git-tracked site tree over FTPS, diffing against a SHA-256 manifest
+# stored on the server, so only changed files travel.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-upload every tracked file, ignoring the hash manifest"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+# The FTP account tolerates one session at a time; queue overlapping runs.
+concurrency:
+  group: ftp-publish
+  cancel-in-progress: false
+
+jobs:
+  ftp-publish:
+    runs-on: ubuntu-latest
+    # Skips cleanly until the FTP secrets are configured.
+    if: ${{ vars.FTP_ENABLED == 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Mirror tracked files to FTP
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT || 21 }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+          FTP_FORCE: ${{ inputs.force || 'false' }}
+          FTP_MAX_RETRIES: 5
+          FTP_RETRY_MAX_DELAY_SECONDS: 60
+          FTP_VERIFY_CERTIFICATE: true
+        # The script is stdlib-only, so no uv/dependency install is needed —
+        # unlike hct.github.io, whose pyproject serves its data pipelines.
+        run: python3 python/ftp_upload.py
