@@ -1198,6 +1198,47 @@ a {
   color: var(--ink-soft);
 }
 
+.poem-toc {
+  max-width: 600px;
+  margin: var(--space-md) auto 0;
+  padding: 1.4rem 1.6rem 1.2rem;
+  background: var(--warm-white);
+  border: 1px solid rgba(30, 27, 24, 0.1);
+}
+
+.poem-toc__label {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.poem-toc__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.poem-toc__link {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.poem-toc__link:hover,
+.poem-toc__link:focus-visible {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
 .poem-archive__empty {
   margin: var(--space-md) 0 0;
   text-align: center;
@@ -1217,6 +1258,7 @@ a {
 
 .poem-group {
   margin: var(--space-md) 0 0;
+  scroll-margin-top: calc(var(--header-h, 72px) + 4.5rem);
   padding-bottom: 0.6rem;
   border-bottom: 1px solid rgba(201, 164, 85, 0.4);
   font-family: var(--font-sans);

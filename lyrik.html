@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css?v=1.2.0" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1.3.0" />
   </head>
   <body>
 
@@ -109,6 +109,11 @@
             </div>
             <p class="poem-archive__count" aria-live="polite"></p>
           </div>
+
+          <nav class="poem-toc" id="poem-toc" aria-label="Themen des Bandes" hidden>
+            <p class="poem-toc__label">Themen</p>
+            <ul class="poem-toc__list"></ul>
+          </nav>
 
           <p class="poem-archive__empty" hidden>Keine Gedichte gefunden.</p>
 
@@ -1056,7 +1061,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="fruehling">Frühling</h3>
+            <h3 class="poem-group" id="poem-group-fruehling" data-band="kindergedichte" data-group="fruehling">Frühling</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="fruehling">
               <h3 class="poem__title">Frühling</h3>
@@ -1067,7 +1072,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="ostern">Ostern</h3>
+            <h3 class="poem-group" id="poem-group-ostern" data-band="kindergedichte" data-group="ostern">Ostern</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="ostern">
               <h3 class="poem__title">Bewegungsreim Hase</h3>
@@ -1185,7 +1190,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="muttertag">Muttertag</h3>
+            <h3 class="poem-group" id="poem-group-muttertag" data-band="kindergedichte" data-group="muttertag">Muttertag</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="muttertag">
               <h3 class="poem__title">Alle Tage</h3>
@@ -1337,7 +1342,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="vatertag">Vatertag</h3>
+            <h3 class="poem-group" id="poem-group-vatertag" data-band="kindergedichte" data-group="vatertag">Vatertag</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="vatertag">
               <h3 class="poem__title">Der stärkste Mann</h3>
@@ -1443,7 +1448,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="sommer">Sommer</h3>
+            <h3 class="poem-group" id="poem-group-sommer" data-band="kindergedichte" data-group="sommer">Sommer</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="sommer">
               <h3 class="poem__title">Der Sonnenstrahl</h3>
@@ -1489,7 +1494,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="herbst">Herbst</h3>
+            <h3 class="poem-group" id="poem-group-herbst" data-band="kindergedichte" data-group="herbst">Herbst</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="herbst">
               <h3 class="poem__title">Der Apfelkönig Florian</h3>
@@ -1515,7 +1520,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="nikolaus">Nikolaus &amp; Weihnachten</h3>
+            <h3 class="poem-group" id="poem-group-nikolaus" data-band="kindergedichte" data-group="nikolaus">Nikolaus &amp; Weihnachten</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="nikolaus">
               <h3 class="poem__title">Advent</h3>
@@ -1781,7 +1786,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="geburtstag">Geburtstag</h3>
+            <h3 class="poem-group" id="poem-group-geburtstag" data-band="kindergedichte" data-group="geburtstag">Geburtstag</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="geburtstag">
               <h3 class="poem__title">Echt gut, dass es dich gibt</h3>
@@ -1922,7 +1927,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="feste">Feste &amp; Feiern</h3>
+            <h3 class="poem-group" id="poem-group-feste" data-band="kindergedichte" data-group="feste">Feste &amp; Feiern</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="feste">
               <h3 class="poem__title">Ach bitte erwartet nicht zu viel</h3>
@@ -1998,7 +2003,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="fasching">Fasching &amp; Zirkus</h3>
+            <h3 class="poem-group" id="poem-group-fasching" data-band="kindergedichte" data-group="fasching">Fasching &amp; Zirkus</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="fasching">
               <h3 class="poem__title">Der Clown</h3>
@@ -2063,7 +2068,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="maerchen">Märchen</h3>
+            <h3 class="poem-group" id="poem-group-maerchen" data-band="kindergedichte" data-group="maerchen">Märchen</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="maerchen">
               <h3 class="poem__title">Das Scheue und das Wilde</h3>
@@ -2161,7 +2166,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="kunst">Kunst &amp; Farben</h3>
+            <h3 class="poem-group" id="poem-group-kunst" data-band="kindergedichte" data-group="kunst">Kunst &amp; Farben</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="kunst">
               <h3 class="poem__title">Bin nicht Picasso</h3>
@@ -2249,7 +2254,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="tiere">Tiere</h3>
+            <h3 class="poem-group" id="poem-group-tiere" data-band="kindergedichte" data-group="tiere">Tiere</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="tiere">
               <h3 class="poem__title">Am Südpol</h3>
@@ -2417,7 +2422,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="gebete">Gebete</h3>
+            <h3 class="poem-group" id="poem-group-gebete" data-band="kindergedichte" data-group="gebete">Gebete</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="gebete">
               <h3 class="poem__title">Danke, dass es schneit</h3>
@@ -2536,7 +2541,7 @@
               </div>
             </article>
 
-            <h3 class="poem-group" data-band="kindergedichte" data-group="alltag">Alltag &amp; Miteinander</h3>
+            <h3 class="poem-group" id="poem-group-alltag" data-band="kindergedichte" data-group="alltag">Alltag &amp; Miteinander</h3>
 
             <article class="poem-leaf" data-band="kindergedichte" data-group="alltag">
               <h3 class="poem__title">Am Morgen mach ich die Augen auf</h3>
@@ -3175,6 +3180,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/main.js?v=1.2.0"></script>
+    <script src="assets/js/main.js?v=1.3.0"></script>
   </body>
 </html>

@@ -67,6 +67,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const haystack = new Map(cards.map((c) => [c, c.textContent.toLowerCase()]));
     let band = archive.querySelector(".poem-filter__btn.is-active").dataset.band;
 
+    // Both the site header and the band nav are sticky, so a heading has to
+    // clear their combined height to stay readable after the jump.
+    const stickyNav = archive.querySelector(".poem-nav");
+    const scrollToHeading = (headingEl) => {
+      const offset =
+        (header ? header.offsetHeight : 0) +
+        (stickyNav ? stickyNav.offsetHeight : 0) +
+        16;
+      const top = headingEl.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    };
+
+    // Table of contents, built from the group headings so both stay in sync
+    const toc = archive.querySelector(".poem-toc");
+    const tocLinks = new Map();
+    if (toc) {
+      const list = toc.querySelector(".poem-toc__list");
+      listItems
+        .filter((el) => el.classList.contains("poem-group"))
+        .forEach((headingEl) => {
+          const item = document.createElement("li");
+          const link = document.createElement("a");
+          link.className = "poem-toc__link";
+          link.href = `#${headingEl.id}`;
+          link.textContent = headingEl.textContent;
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            scrollToHeading(headingEl);
+          });
+          item.appendChild(link);
+          list.appendChild(item);
+          tocLinks.set(headingEl, item);
+        });
+    }
+
     const apply = () => {
       const query = input.value.trim().toLowerCase();
       let shown = 0;
@@ -83,16 +118,27 @@ document.addEventListener("DOMContentLoaded", () => {
       // filter, so empty themes disappear along with their poems.
       let heading = null;
       let headingHasPoem = false;
+      let themes = 0;
+      const settle = () => {
+        if (!heading) return;
+        heading.hidden = !headingHasPoem;
+        const item = tocLinks.get(heading);
+        if (item) item.hidden = !headingHasPoem;
+        if (headingHasPoem) themes += 1;
+      };
+
       listItems.forEach((el) => {
         if (el.classList.contains("poem-group")) {
-          if (heading) heading.hidden = !headingHasPoem;
+          settle();
           heading = el;
           headingHasPoem = false;
         } else if (el.dataset.group && !el.hidden) {
           headingHasPoem = true;
         }
       });
-      if (heading) heading.hidden = !headingHasPoem;
+      settle();
+
+      if (toc) toc.hidden = themes === 0;
 
       countEl.textContent = shown === 1 ? "1 Gedicht" : `${shown} Gedichte`;
       emptyEl.hidden = shown > 0;
