@@ -264,12 +264,22 @@ a {
 
 .hero__tagline {
   font-family: var(--font-sans);
-  font-size: 1.36rem;
+  font-size: clamp(0.6rem, 2.6vw, 1.36rem);
   font-weight: 600;
-  letter-spacing: 0.42em;
+  letter-spacing: clamp(0.14em, 0.8vw, 0.42em);
   text-transform: uppercase;
   color: var(--ink-soft);
+  max-width: 100%;
+  padding: 0 var(--space-sm);
+  text-align: center;
+  line-height: 1.6;
+  overflow-wrap: break-word;
   animation: fadeUp 1s var(--ease-out) 0.65s both;
+}
+
+.hero__tagline-sep {
+  margin: 0 0.35em;
+  opacity: 0.55;
 }
 
 .hero__scroll {
@@ -367,8 +377,14 @@ a {
 .work-card__info {
   position: absolute;
   inset: auto 0 0;
-  padding: 1.4rem 1.6rem;
-  background: linear-gradient(to top, rgba(18, 14, 10, 0.78) 0%, transparent 100%);
+  padding: 1.6rem 1.6rem 1.4rem;
+  background: linear-gradient(
+    to top,
+    rgba(12, 9, 6, 0.92) 0%,
+    rgba(12, 9, 6, 0.72) 45%,
+    rgba(12, 9, 6, 0.28) 78%,
+    transparent 100%
+  );
   color: #fff;
   opacity: 0;
   transform: translateY(6px);
@@ -387,15 +403,18 @@ a {
   font-weight: 600;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #e3c887;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
   margin-bottom: 0.3rem;
 }
 
 .work-card h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.2rem;
   letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 0, 0, 0.45);
 }
 
 /* Editorial grid placement — desktop (3 cols) */
@@ -830,7 +849,9 @@ a {
 .page-hero__title {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(2.6rem, 6vw, 5.5rem);
+  font-size: clamp(1.8rem, 7vw, 5.5rem);
+  overflow-wrap: break-word;
+  hyphens: auto;
   letter-spacing: 0.08em;
   line-height: 1.05;
   margin-top: 0.55rem;
