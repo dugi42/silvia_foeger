@@ -32,12 +32,12 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 BANDS = {
     "sehnsucht": {"title": "Sehnsucht", "roman": "Band I", "file": "Sehnsucht.pdf"},
     "hoffnung": {"title": "Hoffnung", "roman": "Band II", "file": "Hoffnung.pdf"},
+    "irgendwann": {"title": "Irgendwann", "roman": "Band III", "file": "Irgendwann.pdf"},
     "kindergedichte": {
         "title": "Kindergedichte",
-        "roman": "Band III",
+        "roman": "Band IV",
         "file": "Kindergedichte.pdf",
     },
-    "irgendwann": {"title": "Irgendwann", "roman": "Band IV", "file": "Irgendwann.pdf"},
 }
 
 POEM_RE = re.compile(
