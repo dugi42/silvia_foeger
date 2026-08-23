@@ -1,2 +1,6 @@
 .DS_Store
 __pycache__/
+
+# Generated poem volumes: rebuild with python/make_poem_pdfs.py.
+# Kept out of the repo so the FTP deploy does not publish them.
+print/
