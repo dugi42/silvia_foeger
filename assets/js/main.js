@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const archive = document.getElementById("poem-archive");
   if (archive) {
     const cards = Array.from(archive.querySelectorAll(".poem-leaf"));
+    const listItems = Array.from(archive.querySelector(".poems-list").children);
     const buttons = Array.from(archive.querySelectorAll(".poem-filter__btn"));
     const input = archive.querySelector(".poem-search__input");
     const countEl = archive.querySelector(".poem-archive__count");
@@ -77,6 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
         card.hidden = !visible;
         if (visible) shown += 1;
       });
+
+      // A group heading stays only as long as a poem below it survived the
+      // filter, so empty themes disappear along with their poems.
+      let heading = null;
+      let headingHasPoem = false;
+      listItems.forEach((el) => {
+        if (el.classList.contains("poem-group")) {
+          if (heading) heading.hidden = !headingHasPoem;
+          heading = el;
+          headingHasPoem = false;
+        } else if (el.dataset.group && !el.hidden) {
+          headingHasPoem = true;
+        }
+      });
+      if (heading) heading.hidden = !headingHasPoem;
 
       countEl.textContent = shown === 1 ? "1 Gedicht" : `${shown} Gedichte`;
       emptyEl.hidden = shown > 0;

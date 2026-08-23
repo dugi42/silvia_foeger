@@ -1215,6 +1215,22 @@ a {
   margin: var(--space-md) auto 0;
 }
 
+.poem-group {
+  margin: var(--space-md) 0 0;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(201, 164, 85, 0.4);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.poem-group:first-child {
+  margin-top: 0;
+}
+
 .poem-leaf {
   background: var(--warm-white);
   border-top: 2px solid var(--gold);
