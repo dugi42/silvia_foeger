@@ -50,7 +50,7 @@ $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 $text = isset($_POST['nachricht']) ? trim($_POST['nachricht']) : '';
 
 if ($name === '' || $text === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    respond(false, 'Bitte Name, E-Mail und Nachricht ausfuellen.', 422, $redirectTarget);
+    respond(false, 'Bitte Name, E-Mail und Nachricht ausfüllen.', 422, $redirectTarget);
 }
 
 $len = function_exists('mb_strlen') ? 'mb_strlen' : 'strlen';
@@ -62,7 +62,7 @@ if ($len($name) > 120 || $len($email) > 190 || $len($text) > 5000) {
 $safeName = preg_replace('/[\r\n]+/', ' ', $name);
 $safeEmail = preg_replace('/[\r\n]+/', '', $email);
 
-$subject = 'Nachricht ueber silvia-foeger.at';
+$subject = 'Nachricht über silvia-foeger.at';
 $body = 'Name: ' . $safeName . "\n"
     . 'E-Mail: ' . $safeEmail . "\n"
     . 'Gesendet: ' . date('d.m.Y H:i') . "\n\n"
