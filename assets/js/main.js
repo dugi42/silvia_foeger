@@ -261,6 +261,52 @@ document.addEventListener("DOMContentLoaded", () => {
     apply();
   }
 
+  // Contact form: submit in place, so nobody loses the page they were reading.
+  // Without JS the form posts normally and kontakt.php redirects back.
+  const contactForm = document.getElementById("contact-form");
+  const contactStatus = document.getElementById("contact-status");
+  if (contactForm && contactStatus) {
+    const button = contactForm.querySelector(".contact__submit");
+
+    const setStatus = (text, state) => {
+      contactStatus.textContent = text;
+      contactStatus.classList.remove("is-error", "is-success");
+      if (state) contactStatus.classList.add(state);
+    };
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+
+      button.disabled = true;
+      setStatus("Wird gesendet …", null);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(contactForm),
+        });
+        const result = await response.json();
+        if (result.ok) {
+          contactForm.reset();
+          setStatus(result.message || "Danke, ich melde mich!", "is-success");
+        } else {
+          setStatus(result.message || "Das hat nicht geklappt.", "is-error");
+        }
+      } catch (error) {
+        setStatus("Das hat nicht geklappt. Bitte später noch einmal.", "is-error");
+      } finally {
+        button.disabled = false;
+      }
+    });
+
+    // Rückweg ohne JavaScript: kontakt.php hängt das Ergebnis an die URL.
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("gesendet")) setStatus("Danke, ich melde mich!", "is-success");
+    if (params.has("fehler")) setStatus("Das hat nicht geklappt.", "is-error");
+  }
+
   // Copyright year
   const yearEl = document.getElementById("copyright-year");
   if (yearEl) {

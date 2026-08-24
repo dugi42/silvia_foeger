@@ -34,6 +34,17 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Die Empfaengeradresse gehoert nicht ins oeffentliche Repo. Sie wird
+      # erst hier in die getrackte Platzhalterdatei geschrieben, damit der
+      # Mirror sie mit hochlaedt.
+      # Die Empfaengeradresse gehoert nicht ins oeffentliche Repo. Sie wird
+      # erst hier in die getrackte Platzhalterdatei geschrieben, damit der
+      # Mirror sie mit hochlaedt.
+      - name: Kontaktadresse einsetzen
+        env:
+          CONTACT_MAIL_TO: ${{ secrets.CONTACT_MAIL_TO }}
+        run: python3 python/inject_contact_address.py
+
       - name: Mirror tracked files to FTP
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}

@@ -10,8 +10,9 @@
   --dark: #171412;
   --dark-mid: #231f1c;
 
-  --font-serif: "Cormorant Garamond", "Georgia", serif;
-  --font-sans: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Eine Schriftfamilie für die ganze Seite. Gewicht, Größe und Laufweite
+     dürfen variieren, die Familie nicht. */
+  --font: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -35,7 +36,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font);
   color: var(--ink);
   background: var(--cream);
   line-height: 1.65;
@@ -72,7 +73,7 @@ a {
 }
 
 .eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.38em;
@@ -116,7 +117,7 @@ a {
 .nav-links {
   display: flex;
   gap: 2.2rem;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.28em;
@@ -246,7 +247,7 @@ a {
 }
 
 .hero__name {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 300;
   font-size: clamp(2.8rem, 7.5vw, 6.5rem);
   letter-spacing: 0.2em;
@@ -263,10 +264,11 @@ a {
 }
 
 .hero__tagline {
-  font-family: var(--font-sans);
-  font-size: clamp(0.6rem, 2.6vw, 1.36rem);
+  font-family: var(--font);
+  /* Die Serif läuft breiter als die alte Sans, daher kleinere Obergrenzen. */
+  font-size: clamp(0.6rem, 2.2vw, 1.1rem);
   font-weight: 600;
-  letter-spacing: clamp(0.14em, 0.8vw, 0.42em);
+  letter-spacing: clamp(0.14em, 0.6vw, 0.3em);
   text-transform: uppercase;
   color: var(--ink-soft);
   max-width: 100%;
@@ -332,7 +334,7 @@ a {
 }
 
 .section-header h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 400;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-top: 0.45rem;
@@ -409,7 +411,7 @@ a {
 }
 
 .work-card h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 500;
   font-size: 1.2rem;
   letter-spacing: 0.04em;
@@ -486,7 +488,7 @@ a {
 }
 
 .disc-card h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 400;
   font-size: 1.45rem;
   margin-bottom: 0.85rem;
@@ -506,19 +508,29 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 72vh;
+  align-items: start;
 }
 
 .about__media {
   position: relative;
   overflow: hidden;
   background: var(--parchment);
+  /* Die Bildspalte bleibt bildschirmhoch und läuft beim Lesen mit, statt
+     über die ganze Textlänge gestreckt zu werden. Das hält das Porträt in
+     einer Größe, die die Auflösung auch trägt. Das Bild wird über
+     object-fit zugeschnitten, ein neues Porträt mit anderen Maßen bricht
+     das Layout also nicht. */
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 .about__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  /* Auf das Gesicht ausgerichtet, nicht auf den Himmel darüber. */
+  object-position: 58% 30%;
   transition: transform 0.8s var(--ease-out);
 }
 
@@ -536,7 +548,7 @@ a {
 }
 
 .about__text h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 400;
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   letter-spacing: 0.02em;
@@ -567,7 +579,7 @@ a {
   width: fit-content;
   padding: 0.8rem 2rem;
   border: 1px solid var(--gold);
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.64rem;
   font-weight: 600;
   letter-spacing: 0.3em;
@@ -620,7 +632,7 @@ a {
 }
 
 .footer__col h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.38em;
@@ -698,7 +710,11 @@ a {
   }
 
   .about__media {
+    /* Einspaltig: kein Sticky, sonst klebt das Bild über dem Text. */
+    position: static;
+    height: auto;
     min-height: 55vw;
+    max-height: 80vh;
   }
 
   .about__text {
@@ -847,7 +863,7 @@ a {
 }
 
 .page-hero__title {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 300;
   font-size: clamp(1.8rem, 7vw, 5.5rem);
   overflow-wrap: break-word;
@@ -914,7 +930,7 @@ a {
 }
 
 .page-intro__text h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 400;
   font-size: clamp(1.9rem, 3vw, 2.7rem);
   letter-spacing: 0.02em;
@@ -995,7 +1011,7 @@ a {
 }
 
 .page-quote blockquote {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-style: italic;
   font-weight: 300;
   font-size: clamp(1.45rem, 3vw, 2.1rem);
@@ -1006,7 +1022,7 @@ a {
 .page-quote cite {
   display: block;
   margin-top: 1.8rem;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-style: normal;
   font-size: 0.65rem;
   font-weight: 600;
@@ -1124,7 +1140,7 @@ a {
   border-bottom: 1px solid transparent;
   padding: 0 0 2px;
   cursor: pointer;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -1158,7 +1174,7 @@ a {
   background: var(--warm-white);
   border: 1px solid rgba(30, 27, 24, 0.12);
   padding: 0.85rem 1.2rem;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.9rem;
   color: var(--ink);
 }
@@ -1196,7 +1212,7 @@ a {
   padding: 0.5rem 1.2rem;
   text-align: left;
   cursor: pointer;
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-size: 1.05rem;
   color: var(--ink);
 }
@@ -1211,7 +1227,7 @@ a {
 .poem-archive__count {
   margin: 1rem 0 0;
   text-align: center;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -1229,7 +1245,7 @@ a {
 
 .poem-toc__label {
   margin: 0 0 0.9rem;
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -1247,7 +1263,7 @@ a {
 }
 
 .poem-toc__link {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-size: 1.02rem;
   color: var(--ink);
   border-bottom: 1px solid transparent;
@@ -1263,7 +1279,7 @@ a {
 .poem-archive__empty {
   margin: var(--space-md) 0 0;
   text-align: center;
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-style: italic;
   font-size: 1.05rem;
   color: var(--ink-soft);
@@ -1282,7 +1298,7 @@ a {
   scroll-margin-top: calc(var(--header-h, 72px) + 4.5rem);
   padding-bottom: 0.6rem;
   border-bottom: 1px solid rgba(201, 164, 85, 0.4);
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.28em;
@@ -1302,7 +1318,7 @@ a {
 }
 
 .poem__title {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 400;
   font-size: 1.3rem;
   letter-spacing: 0.02em;
@@ -1318,7 +1334,7 @@ a {
 }
 
 .poem__body {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-style: italic;
   font-weight: 300;
   font-size: 1.06rem;
@@ -1338,7 +1354,7 @@ a {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(30, 27, 24, 0.1);
-  font-family: var(--font-sans);
+  font-family: var(--font);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.32em;
@@ -1379,7 +1395,7 @@ a {
 }
 
 .coming-soon__inner h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font);
   font-weight: 300;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   letter-spacing: 0.08em;
@@ -1416,5 +1432,137 @@ a {
   .hero__spiral img,
   .hero__scroll-line {
     animation: none;
+  }
+}
+
+
+/* ── KONTAKT ── */
+
+.contact {
+  padding: var(--space-xl) 0;
+  background: var(--warm-white);
+}
+
+.contact__intro {
+  max-width: 46ch;
+  margin: 0 auto var(--space-md);
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.contact__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-md);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field--wide {
+  grid-column: 1 / -1;
+}
+
+/* Der Honigtopf muss für Bots im DOM stehen, für Menschen aber unerreichbar
+   sein. display:none würde ihn auch für manche Bots verraten. */
+.field--trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.field label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid rgba(30, 27, 24, 0.14);
+  border-radius: 0;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.contact__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.contact__submit {
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--gold);
+  padding: 0.85rem 2.2rem;
+  cursor: pointer;
+  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.contact__submit:hover {
+  background: var(--gold);
+  color: var(--warm-white);
+}
+
+.contact__submit[disabled] {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.contact__status {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+
+.contact__status.is-error {
+  color: #9c3b2e;
+}
+
+.contact__status.is-success {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .contact__form {
+    grid-template-columns: 1fr;
   }
 }

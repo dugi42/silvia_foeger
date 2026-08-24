@@ -19,3 +19,16 @@ Redirect 301 /zeichnung.html /gestalttherapie.html
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 </IfModule>
+
+# Die Empfaengeradresse des Kontaktformulars wird nur von kontakt.php gelesen.
+# Direkter Abruf bleibt gesperrt, damit die Adresse auch dann nicht sichtbar
+# wird, wenn der Server einmal kein PHP ausfuehrt.
+<Files "mail-to.inc">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>
